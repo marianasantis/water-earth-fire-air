@@ -1,14 +1,22 @@
-// FOR 5 rounds INCREMENT counter and CALL playRound function
+let points = 0;
+
+// FOR 5 rounds INCREMENT counter and CALL playRound function while storing points per victory
 for(i = 1; i <= 5; i++) {
-  playRound();
-  console.log('Round ' + i) //rm this
+  console.log('Round ' + i)
+  points += (playRound());
+}
+
+if (points >= 3) {
+  console.log("Congrats! You've won the game!")
+} else {
+  console.log("You've lost the game. Better luck next time!")
 }
 
 // START round
 function playRound(playerSelection, computerSelection) {
 
   // GET player selection and make it case insensitive
-  playerSelection = 'rock' // prompt('Your choice: ').toLowerCase()
+  playerSelection = prompt('Your choice: ').toLowerCase()
 
   // GET computer selection 
   computerSelection = Math.floor(Math.random() * 3)
@@ -33,20 +41,23 @@ function playRound(playerSelection, computerSelection) {
       playerSelection = null;
   }
 
-  // CODE the game rules and re-play if its a tie
+  // CODE the game rules and re-play if it's a tie
   if (playerSelection === 0) {
     
     switch(computerSelection) {
       
       case 0:
-        return "It's a tie";
-        //playRound();
+        return playRound();
 
       case 1:
-        return 'You lose';
-
+        console.log('You lose. Paper beats rock.');
+        return 0;
+        
       case 2:
-        return 'You win';
+        console.log('You win. Rock beats scissors.');
+        points = 1;
+        return 1; 
+      
     }
   
   } else if (playerSelection === 1) {
@@ -54,14 +65,15 @@ function playRound(playerSelection, computerSelection) {
     switch (computerSelection) {
       
       case 0:
-        return 'You win';
+        console.log('You win. Paper beats rock.');
+        return 1;
         
-        case 1:
-        return "It's a tie";
-        //playRound();
+      case 1:
+        return playRound();
 
-        case 2:
-        return 'You lose';
+      case 2:
+        console.log('You lose. Scissors beats paper.');
+        return 0;
     }
 
   } else if (playerSelection === 2) {
@@ -69,19 +81,20 @@ function playRound(playerSelection, computerSelection) {
     switch (computerSelection) {
       
       case 0:
-        return 'You lose';
+        console.log('You lose. Rock beats scissors.');
+        return 0;
         
-        case 1:
-        return 'You win';
-        
-        case 2:
-        return "It's a tie";
-        //playRound();
-        
+      case 1:
+        console.log('You win. Scissors beats paper.');
+        return 1;
+
+      case 2:
+        return playRound();
     }
+
   } else {
-    return 'Answer is not valid';
-    //playRound();
+
+    console.log('Answer is not valid');
+    return playRound();
   }
-// uncomment replay round and prompt
 }
