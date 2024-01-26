@@ -47,6 +47,7 @@ function playRound(playerSelection, computerSelection) {
     switch(computerSelection) {
       
       case 0:
+        console.log("It's a tie! Choose again!");  
         return playRound();
 
       case 1:
@@ -69,6 +70,7 @@ function playRound(playerSelection, computerSelection) {
         return 1;
         
       case 1:
+        console.log("It's a tie! Choose again!"); 
         return playRound();
 
       case 2:
@@ -89,6 +91,7 @@ function playRound(playerSelection, computerSelection) {
         return 1;
 
       case 2:
+        console.log("It's a tie! Choose again!"); 
         return playRound();
     }
 
