@@ -1,23 +1,6 @@
 let playerPoints = 0;
 let pcPoints = 0;
 
-// FOR 5 rounds INCREMENT counter and CALL playRound function while storing points per victory]
-/*
-for(i = 1; i <= 5; i++) {
-  console.log('Round ' + i)
-  points += (playRound());
-}
-
-
-if (points >= 3) {
-  console.log("Coreturn 0;ngrats! You've won the game!")
-} else {
-  console.log("You've lost the game. Better luck next time!")
-}
-
-*/
-
-
 function playRound(playerSelection, computerSelection) {
 
   let result = document.querySelector(".result");
