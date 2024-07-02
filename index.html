@@ -6,24 +6,45 @@
   <title>Rock Paper Scissors</title>
 </head>
 <body>
-  <h1>Water, Earth, Fire, Air - Avatar The Last Airbender</h1>
-  <p>Make your choice</p>
-  <div>
-    <button id="0">Water</button>
-    <button id="1">Earth</button>
-    <button id="2">Fire</button>
-    <button id="3">Air</button>
+  <div class="header">
+    <h1>Water, Earth, Fire & Air</h1> <h2>Avatar The Last Airbender</h2>
+  </div>
+  
+  <div class="main">
+    <h1 class="winner">Make your choice</h1>
+    <h3 class="result">First to score 5 points wins</h3>
+    <div class="choices">
+      <div class="choice">
+        <img>
+        <p>Player: <span class="playerScore">0</span></p>
+      </div>
+      <div class="choice">
+        <img>
+        <p>Computer: <span class="pcScore">0</span></p>
+      </div>
+    </div>
   </div>
 
-  <div class="pcChoice"></div>
-  <div class="result"></div>
-
-  <div>
-    Player Score: <span class="playerScore">0</span>
-    Computer Score: <span class="pcScore">0</span>
+  <div class="buttons">
+    <button id="0">
+      <img src="./water.png" alt="" class="water-img">
+    </button>
+    <button id="1">
+      <img src="./earth.png" alt="" class="earth-img">
+    </button>
+    <button id="2">
+      <img src="./fire.png" alt="" class="fire-img">
+    </button>
+    <button id="3">
+      <img src="./air.png" alt="" class="air-img"></button>
   </div>
 
-  <div class="winner">
+  <div class="footer">
+    <p>Copyright © 2024 marianasantis </p>
+    <a href="https://github.com/marianasantis">
+      <img src="./github.png" alt="" class="logo">
+    </a>
+  </div>
 
   </div>
   <script src="./script.js"></script>
