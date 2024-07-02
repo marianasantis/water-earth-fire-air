@@ -1,64 +1,51 @@
-let points = 0;
+let playerPoints = 0;
+let pcPoints = 0;
 
-// FOR 5 rounds INCREMENT counter and CALL playRound function while storing points per victory
+// FOR 5 rounds INCREMENT counter and CALL playRound function while storing points per victory]
+/*
 for(i = 1; i <= 5; i++) {
   console.log('Round ' + i)
   points += (playRound());
 }
 
+
 if (points >= 3) {
-  console.log("Congrats! You've won the game!")
+  console.log("Coreturn 0;ngrats! You've won the game!")
 } else {
   console.log("You've lost the game. Better luck next time!")
 }
 
-// START round
+*/
+
+
 function playRound(playerSelection, computerSelection) {
 
-  // GET player selection and make it case insensitive
-  playerSelection = prompt('Your choice: ').toLowerCase()
+  let result = document.querySelector(".result");
+  let winner = document.querySelector(".winner");
+  let pcChoice = document.querySelector(".pcChoice")
+  result.textContent = "";
+  winner.textContent = "";
 
-  // GET computer selection 
-  computerSelection = Math.floor(Math.random() * 3)
-
-  // TRANSLATE player selection to a number
-  // Rock = 0; Paper = 1; Scissors = 2
-  switch(playerSelection) {
-    
-    case 'rock':
-      playerSelection = 0;
-      break;
-    
-    case 'paper':
-      playerSelection = 1;
-      break;
-    
-    case 'scissors':
-      playerSelection = 2;
-      break;
-    
-    default:
-      playerSelection = null;
-  }
-
-  // CODE the game rules and re-play if it's a tie
   if (playerSelection === 0) {
     
     switch(computerSelection) {
       
       case 0:
-        console.log("It's a tie! Choose again!");  
-        return playRound();
+        pcChoice.textContent = "Computer chooses Rock";
+        result.textContent = "It's a tie! Try again.";  
+        break;
 
       case 1:
-        console.log('You lose. Paper beats rock.');
-        return 0;
+        pcChoice.textContent = "Computer chooses Paper";
+        result.textContent = "You lose. Paper beats Rock.";
+        pcPoints += 1;
+        break;
         
       case 2:
-        console.log('You win. Rock beats scissors.');
-        points = 1;
-        return 1; 
-      
+        pcChoice.textContent = "Computer chooses Scissors";
+        result.textContent = "You win. Rock beats Scissors.";
+        playerPoints += 1;
+        break;
     }
   
   } else if (playerSelection === 1) {
@@ -66,16 +53,21 @@ function playRound(playerSelection, computerSelection) {
     switch (computerSelection) {
       
       case 0:
-        console.log('You win. Paper beats rock.');
-        return 1;
+        pcChoice.textContent = "Computer chooses Rock";
+        result.textContent = "You win. Paper beats Rock.";
+        playerPoints += 1;
+        break;
         
       case 1:
-        console.log("It's a tie! Choose again!"); 
-        return playRound();
+        pcChoice.textContent = "Computer chooses Paper";
+        result.textContent = "It's a tie! Try again."; 
+        break;
 
       case 2:
-        console.log('You lose. Scissors beats paper.');
-        return 0;
+        pcChoice.textContent = "Computer chooses Scissors";
+        result.textContent = "You lose. Scissors beats Paper.";
+        pcPoints += 1;
+        break;
     }
 
   } else if (playerSelection === 2) {
@@ -83,21 +75,46 @@ function playRound(playerSelection, computerSelection) {
     switch (computerSelection) {
       
       case 0:
-        console.log('You lose. Rock beats scissors.');
-        return 0;
+        pcChoice.textContent = "Computer chooses Rock";
+        result.textContent = "You lose. Rock beats Scissors.";
+        pcPoints += 1;
+        break;
         
       case 1:
-        console.log('You win. Scissors beats paper.');
-        return 1;
+        pcChoice.textContent = "Computer chooses Paper";
+        result.textContent = "You win. Scissors beats Paper.";
+        playerPoints += 1;
+        break
 
       case 2:
-        console.log("It's a tie! Choose again!"); 
-        return playRound();
+        pcChoice.textContent = "Computer chooses Scissors";
+        result.textContent = "It's a tie! Try again."; 
+        break;
     }
+  }
 
-  } else {
-
-    console.log('Answer is not valid');
-    return playRound();
+  let playerNumber = document.querySelector(".playerNumber");
+  let pcNumber = document.querySelector(".pcNumber");
+  playerNumber.textContent = playerPoints;
+  pcNumber.textContent = pcPoints;
+  
+  if (playerPoints === 5 || pcPoints === 5) {
+    if (playerPoints === 5) {
+      winner.textContent = "Player won!";
+    } else {
+      winner.textContent = "Computer won!";
+    }
+    
+    playerPoints = 0;
+    pcPoints = 0;
   }
 }
+
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    let playerSelection = parseInt(button.id);
+    let computerSelection = Math.floor(Math.random() * 3);
+    playRound(playerSelection, computerSelection);
+  });
+});
