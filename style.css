@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Dinofans";
+  src: url("/fonts/Dinofans.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-BoldItalic.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #1F2937;
+  color: white;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.header {
+  font-family: "Dinofans", Verdana;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #171e28;
+  color: rgba(181, 83, 48, 0.827);
+  padding: 30px;
+  font-size: 30px;
+}
+
+.blue {
+  color: rgb(0, 30, 255);
+}
+
+.green {
+  color: rgb(3, 144, 3);
+}
+
+.red {
+  color: rgba(255, 0, 0, 0.677);
+}
+
+.lblue {
+  color: rgba(127, 255, 249, 0.746);
+}
+
+.main {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.choices {
+  padding: 30px;
+  display: flex;
+  gap: 100px;
+}
+
+.imgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 220px;
+  background-color:  #ffffffc4;
+  border-radius: 50px;
+  border: solid black 5px;
+}
+
+.score {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  background-color: #304057;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border: solid black 10px;
+  border-radius: 50px;
+}
+
+.footer {
+  background-color: #171e28;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.footer p {
+  display: flex;
+}

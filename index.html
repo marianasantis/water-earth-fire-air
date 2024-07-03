@@ -4,43 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="header">
-    <h1>Water, Earth, Fire & Air</h1> <h2>Avatar The Last Airbender</h2>
+    <h1><span class="blue">Water</span> <span class="green">Earth</span> <span class="red">Fire</span>  <span class="lblue">Air</span></h1> 
+    <h3>Avatar The Last Airbender</h2>
   </div>
   
   <div class="main">
-    <h1 class="winner">Make your choice</h1>
-    <h3 class="result">First to score 5 points wins</h3>
+    <div class="main-texts">
+      <h1 class="pcChoice">Choose an element</h1>
+      <h3 class="result">Score 5 points to win the game</h3>
+    </div>
     <div class="choices">
-      <div class="choice">
-        <img>
-        <p>Player: <span class="playerScore">0</span></p>
+      <div class="playerChoice">
+        <div class="imgContainer playerContainer">
+          <img class="playerImg" src="/images/appa.png">
+        </div>
+        <p class="score">Player: <span class="playerScore">0</span></p>
       </div>
-      <div class="choice">
-        <img>
-        <p>Computer: <span class="pcScore">0</span></p>
+      <div class="pcChoice">
+        <div class="imgContainer pcContainer">
+          <img class="pcImg" src="/images/momo.png">
+        </div>
+        <p class="score">Computer: <span class="pcScore">0</span></p>
       </div>
     </div>
+    <div class="winner"></div>
   </div>
 
   <div class="buttons">
     <button id="0">
-      <img src="./water.png" alt="" class="water-img">
+      <img src="/images/water.png" alt="" class="waterImg">
     </button>
     <button id="1">
-      <img src="./earth.png" alt="" class="earth-img">
+      <img src="/images/earth.png" alt="" class="earthImg">
     </button>
     <button id="2">
-      <img src="./fire.png" alt="" class="fire-img">
+      <img src="/images/fire.png" alt="" class="fireImg">
     </button>
     <button id="3">
-      <img src="./air.png" alt="" class="air-img"></button>
+      <img src="/images/air.png" alt="" class="airImg"></button>
   </div>
 
   <div class="footer">
-    <p>Copyright © 2024 marianasantis </p>
+    <p>Copyright © 2024 Mariana de Santis </p>
     <a href="https://github.com/marianasantis">
       <img src="./github.png" alt="" class="logo">
     </a>
