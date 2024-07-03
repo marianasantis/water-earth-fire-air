@@ -20,8 +20,8 @@ function playRound(playerSelection, computerSelection) {
       case 0: //pc chose water
         pcChoice.textContent = "It's a tie!";
         result.textContent = "They are the same element";
-        playerImg.src = "/images/water.png"  
-        pcImg.src = "/images/water.png"
+        playerImg.src = "./images/water.png"  
+        pcImg.src = "./images/water.png"
         playerContainer.style.border = "10px solid white";
         pcContainer.style.border = "10px solid white";
         break;
@@ -29,8 +29,8 @@ function playRound(playerSelection, computerSelection) {
       case 1: //pc chose earth
         pcChoice.textContent = "You win!";
         result.textContent = "Water beats Earth";
-        playerImg.src = "/images/water.png"  
-        pcImg.src = "/images/earth.png"
+        playerImg.src = "./images/water.png"  
+        pcImg.src = "./images/earth.png"
         playerContainer.style.border = "10px solid green";
         pcContainer.style.border = "10px solid red";
         playerPoints += 1;
@@ -39,8 +39,8 @@ function playRound(playerSelection, computerSelection) {
       case 2: //pc chose fire
         pcChoice.textContent = "It's a tie!";
         result.textContent = "Water and Fire are opposite elements";
-        playerImg.src = "/images/water.png"  
-        pcImg.src = "/images/fire.png"
+        playerImg.src = "./images/water.png"  
+        pcImg.src = "./images/fire.png"
         playerContainer.style.border = "10px solid black";
         pcContainer.style.border = "10px solid white";
         break;
@@ -48,8 +48,8 @@ function playRound(playerSelection, computerSelection) {
       case 3: //pc chose air
         pcChoice.textContent = "You lose!";
         result.textContent = "Air beats Water";
-        playerImg.src = "/images/water.png"  
-        pcImg.src = "/images/air.png"
+        playerImg.src = "./images/water.png"  
+        pcImg.src = "./images/air.png"
         playerContainer.style.border = "10px solid red";
         pcContainer.style.border = "10px solid green";
         pcPoints += 1;
