@@ -8,10 +8,10 @@ let playerImg = document.querySelector(".player-img");
 let pcImg = document.querySelector(".pc-img");
 let playerContainer = document.querySelector(".player-container");
 let pcContainer = document.querySelector(".pc-container");
-result.textContent = "";
-winner.textContent = "";
 
 function playRound(playerSelection, computerSelection) {
+
+winner.textContent = "";
 
   if (playerSelection === 0) { 
     
