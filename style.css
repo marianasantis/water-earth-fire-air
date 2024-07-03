@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Dinofans";
-  src: url("/fonts/Dinofans.ttf");
+  src: url("./fonts/Dinofans.ttf");
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-BoldItalic.ttf");
+  src: url("./fonts/Roboto-BoldItalic.ttf");
 }
 
 * {
