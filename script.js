@@ -1,140 +1,99 @@
 let playerPoints = 0;
 let pcPoints = 0;
 
+let result = document.querySelector(".result");
+let winner = document.querySelector(".winner");
+let pcChoice = document.querySelector(".pcChoice")
+let playerImg = document.querySelector(".playerImg");
+let pcImg = document.querySelector(".pcImg");
+let playerContainer = document.querySelector(".playerContainer");
+let pcContainer = document.querySelector(".pcContainer");
+result.textContent = "";
+winner.textContent = "";
+
 function playRound(playerSelection, computerSelection) {
 
-  let result = document.querySelector(".result");
-  let winner = document.querySelector(".winner");
-  let pcChoice = document.querySelector(".pcChoice")
-  let playerImg = document.querySelector(".playerImg");
-  let pcImg = document.querySelector(".pcImg");
-  let playerContainer = document.querySelector(".playerContainer");
-  let pcContainer = document.querySelector(".pcContainer");
-  result.textContent = "";
-  winner.textContent = "";
-
-  if (playerSelection === 0) { //player chose water
+  if (playerSelection === 0) { 
     
     switch(computerSelection) {
       
-      case 0: //pc chose water
-        pcChoice.textContent = "It's a tie!";
-        result.textContent = "They are the same element";
-        playerImg.src = "./images/water.png"  
-        pcImg.src = "./images/water.png"
-        playerContainer.style.border = "10px solid white";
-        pcContainer.style.border = "10px solid white";
+      case 0: 
+        changeDom("Water", "Water", "tie");
         break;
 
-      case 1: //pc chose earth
-        pcChoice.textContent = "You win!";
-        result.textContent = "Water beats Earth";
-        playerImg.src = "./images/water.png"  
-        pcImg.src = "./images/earth.png"
-        playerContainer.style.border = "10px solid green";
-        pcContainer.style.border = "10px solid red";
-        playerPoints += 1;
+      case 1: 
+        changeDom("Water", "Earth", "playerWins");
         break;
         
-      case 2: //pc chose fire
-        pcChoice.textContent = "It's a tie!";
-        result.textContent = "Water and Fire are opposite elements";
-        playerImg.src = "./images/water.png"  
-        pcImg.src = "./images/fire.png"
-        playerContainer.style.border = "10px solid black";
-        pcContainer.style.border = "10px solid white";
+      case 2:
+        changeDom("Water", "Fire", "tieOpp");
         break;
 
-      case 3: //pc chose air
-        pcChoice.textContent = "You lose!";
-        result.textContent = "Air beats Water";
-        playerImg.src = "./images/water.png"  
-        pcImg.src = "./images/air.png"
-        playerContainer.style.border = "10px solid red";
-        pcContainer.style.border = "10px solid green";
-        pcPoints += 1;
+      case 3: 
+        changeDom("Water", "Air", "pcWins");
         break;
     }
   
-  } else if (playerSelection === 1) { //player chose earth
+  } else if (playerSelection === 1) { 
     
     switch (computerSelection) {
       
-      case 0: //pc chose water
-        pcChoice.textContent = "Computer chose Water";
-        result.textContent = "You lose! Water beats Earth.";
-        
-        pcPoints += 1;
+      case 0:
+        changeDom("Earth", "Water", "pcWins");
         break;
         
-      case 1: //pc chose earth
-        pcChoice.textContent = "Computer chose Earth";
-        result.textContent = "It's a tie! They're the same element."; 
+      case 1: 
+        changeDom("Earth", "Earth", "tie");
         break;
 
-      case 2: //pc chose fire
-        pcChoice.textContent = "Computer chose Fire";
-        result.textContent = "You win! Earth beats Fire.";
-        playerPoints += 1;
+      case 2: 
+        changeDom("Earth", "Fire", "playerWins");
         break;
 
-      case 3: //pc chose air
-        pcChoice.textContent = "Computer chose Air";
-        result.textContent = "It's a tie! Earth and Air are opposite elements."
+      case 3:
+        changeDom("Earth", "Air", "tieOpp");
         break;
     }
 
-  } else if (playerSelection === 2) { //player chose fire
+  } else if (playerSelection === 2) { 
 
     switch (computerSelection) {
       
-      case 0: //pc chose water
-        pcChoice.textContent = "Computer chose Water";
-        result.textContent = "It's a tie! Fire and Water are opposite elements.";
+      case 0: 
+        changeDom("Fire", "Water", "tieOpp");
         break;
         
-      case 1: //pc chose earth
-        pcChoice.textContent = "Computer chose Earth";
-        result.textContent = "You lose! Earth beats Fire.";
-        pcPoints += 1;
-        break
-
-      case 2: //pc chose fire
-        pcChoice.textContent = "Computer chose Fire";
-        result.textContent = "It's a tie! They're the same element."; 
+      case 1: 
+        changeDom("Fire", "Earth", "pcWins");
         break;
 
-      case 3: //pc chose air
-      pcChoice.textContent = "Computer chose Air";
-      result.textContent = "You win! Fire beats Air."; 
-      playerPoints += 1;
-      break;
+      case 2:
+        changeDom("Fire", "Fire", "tie");
+        break;
+
+      case 3: 
+        changeDom("Fire", "Air", "playerWins");
+        break;
     }
-  } else { //player chose air
+  } else { 
 
     switch(computerSelection) {
       
-      case 0: //pc chose water
-        pcChoice.textContent = "Computer chose Water";
-        result.textContent = "You win! Air beats Water";
-        playerPoints += 1;
+      case 0: 
+        changeDom("Air", "Water", "playerWins");
         break;
         
-      case 1: //pc chose earth
-        pcChoice.textContent = "Computer chose Earth";
-        result.textContent = "It's a tie! Air and Earth are opposite elements.";
-        break
-
-      case 2: //pc chose fire
-        pcChoice.textContent = "Computer chose Fire";
-        result.textContent = "You lose! Fire beats Air"; 
-        pcPoints += 1;
+      case 1:
+        changeDom("Air", "Earth", "tieOpp");
+        break;
+        
+      case 2: 
+        changeDom("Air", "Fire", "pcWins");
         break;
 
-      case 3: //pc chose air
-      pcChoice.textContent = "Computer chose Air";
-      result.textContent = "It's a tie! They're the same element."; 
-      break;
+      case 3: 
+        changeDom("Air", "Air", "tie");
+        break;
     }
   }
 
@@ -153,6 +112,42 @@ function playRound(playerSelection, computerSelection) {
     
     playerPoints = 0;
     pcPoints = 0;
+  }
+}
+
+function changeDom (playerEle, pcEle, matchResult) {
+  playerImg.src = "/images/" + playerEle + ".png"  
+  pcImg.src = "/images/" + pcEle + ".png" 
+
+  if (matchResult === "playerWins") {
+
+  pcChoice.textContent = "You win!";
+  result.textContent = playerEle + " beats " + pcEle;
+  playerContainer.style.border = "10px solid green";
+  pcContainer.style.border = "10px solid red";
+  playerPoints += 1;  
+
+  } else if (matchResult === "pcWins") {
+    
+    pcChoice.textContent = "You lose!";
+    result.textContent = pcEle + " beats " + playerEle;
+    playerContainer.style.border = "10px solid red";
+    pcContainer.style.border = "10px solid green";
+    pcPoints += 1;
+  
+  } else if (matchResult === "tieOpp") {
+
+    pcChoice.textContent = "It's a tie!";
+    result.textContent = playerEle + " and " + pcEle + " are opposite elements";
+    playerContainer.style.border = "10px solid black";
+    pcContainer.style.border = "10px solid white";
+
+  } else {
+
+    pcChoice.textContent = "It's a tie!";
+    result.textContent = "They are the same element";
+    playerContainer.style.border = "10px solid white";
+    pcContainer.style.border = "10px solid white";
   }
 }
 
