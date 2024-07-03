@@ -3,11 +3,11 @@ let pcPoints = 0;
 
 let result = document.querySelector(".result");
 let winner = document.querySelector(".winner");
-let pcChoice = document.querySelector(".pcChoice")
-let playerImg = document.querySelector(".playerImg");
-let pcImg = document.querySelector(".pcImg");
-let playerContainer = document.querySelector(".playerContainer");
-let pcContainer = document.querySelector(".pcContainer");
+let pcChoice = document.querySelector(".pc-choice")
+let playerImg = document.querySelector(".player-img");
+let pcImg = document.querySelector(".pc-img");
+let playerContainer = document.querySelector(".player-container");
+let pcContainer = document.querySelector(".pc-container");
 result.textContent = "";
 winner.textContent = "";
 
@@ -97,9 +97,9 @@ function playRound(playerSelection, computerSelection) {
     }
   }
 
-  let playerScore = document.querySelector(".playerScore");
-  let pcScore = document.querySelector(".pcScore");
-  playerScore.textContent = playerPoints;
+  let playerScore = document.querySelector(".player-score");
+  let pcScore = document.querySelector(".pc-score");
+  playerScore.textContent = playerPoints;isSecureContext
   pcScore.textContent = pcPoints;
   
   if (playerPoints === 5 || pcPoints === 5) {
