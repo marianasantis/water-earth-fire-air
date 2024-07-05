@@ -8,6 +8,19 @@ let playerImg = document.querySelector(".player-img");
 let pcImg = document.querySelector(".pc-img");
 let playerContainer = document.querySelector(".player-container");
 let pcContainer = document.querySelector(".pc-container");
+let playerScore = document.querySelector(".player-score");
+let pcScore = document.querySelector(".pc-score");
+let buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+
+  button.addEventListener("click", () => {
+
+    let playerSelection = parseInt(button.id);
+    let computerSelection = Math.floor(Math.random() * 4);
+    playRound(playerSelection, computerSelection);
+  });
+});
 
 function playRound(playerSelection, computerSelection) {
 
@@ -96,28 +109,14 @@ winner.textContent = "";
         break;
     }
   }
-
-  let playerScore = document.querySelector(".player-score");
-  let pcScore = document.querySelector(".pc-score");
-  playerScore.textContent = playerPoints;isSecureContext
-  pcScore.textContent = pcPoints;
   
-  if (playerPoints === 5 || pcPoints === 5) {
-  
-    if (playerPoints === 5) {
-      winner.textContent = "Player won!";
-    } else {
-      winner.textContent = "Computer won!";
-    }
-    
-    playerPoints = 0;
-    pcPoints = 0;
-  }
+  checkGameOver();
 }
 
 function changeDom (playerEle, pcEle, matchResult) {
-  playerImg.src = "/images/" + playerEle + ".png"  
-  pcImg.src = "/images/" + pcEle + ".png" 
+
+  playerImg.src = "./images/" + playerEle + ".png"  
+  pcImg.src = "./images/" + pcEle + ".png" 
 
   if (matchResult === "playerWins") {
 
@@ -149,15 +148,24 @@ function changeDom (playerEle, pcEle, matchResult) {
     playerContainer.style.border = "10px solid white";
     pcContainer.style.border = "10px solid white";
   }
+
+  playerScore.textContent = playerPoints;
+  pcScore.textContent = pcPoints;
 }
 
-const buttons = document.querySelectorAll("button");
-buttons.forEach((button) => {
+function checkGameOver() {
 
-  button.addEventListener("click", () => {
+  if (playerPoints === 5 || pcPoints === 5) {
+  
+    if (playerPoints === 5) {
+      winner.textContent = "Player won!";
+    } else {
+      winner.textContent = "Computer won!";
+    }
+    
+    playerPoints = 0;
+    pcPoints = 0;
+  }
+}
 
-    let playerSelection = parseInt(button.id);
-    let computerSelection = Math.floor(Math.random() * 4);
-    playRound(playerSelection, computerSelection);
-  });
-});
+
