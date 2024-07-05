@@ -80,6 +80,11 @@ body {
   justify-content: center;
 }
 
+.winner {
+  padding-top: 20px;
+  font-size: 40px;
+}
+
 .buttons {
   display: flex;
   flex-wrap: wrap;

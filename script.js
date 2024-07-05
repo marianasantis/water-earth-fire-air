@@ -1,13 +1,13 @@
 let playerPoints = 0;
 let pcPoints = 0;
 
-let result = document.querySelector(".result");
+let match = document.querySelector(".match");
 let winner = document.querySelector(".winner");
-let pcChoice = document.querySelector(".pc-choice")
+let result = document.querySelector(".result")
 let playerImg = document.querySelector(".player-img");
 let pcImg = document.querySelector(".pc-img");
-let playerContainer = document.querySelector(".player-container");
-let pcContainer = document.querySelector(".pc-container");
+let playerImgContainer = document.querySelector(".player-container .img-container");
+let playerPcContainer = document.querySelector(".pc-container .img-container");
 let playerScore = document.querySelector(".player-score");
 let pcScore = document.querySelector(".pc-score");
 let buttons = document.querySelectorAll("button");
@@ -125,33 +125,33 @@ function changeDom (playerElement, pcElement, matchResult) {
 
   if (matchResult === "playerWins") {
 
-  pcChoice.textContent = "You win!";
-  result.textContent = playerElement + " beats " + pcElement;
-  playerContainer.style.border = "10px solid green";
-  pcContainer.style.border = "10px solid red";
+  result.textContent = "You win!";
+  match.textContent = playerElement + " beats " + pcElement;
+  playerImgContainer.style.border = "10px solid green";
+  playerPcContainer.style.border = "10px solid red";
   playerPoints += 1;  
 
   } else if (matchResult === "pcWins") {
     
-    pcChoice.textContent = "You lose!";
-    result.textContent = pcElement + " beats " + playerElement;
-    playerContainer.style.border = "10px solid red";
-    pcContainer.style.border = "10px solid green";
+    result.textContent = "You lose!";
+    match.textContent = pcElement + " beats " + playerElement;
+    playerImgContainer.style.border = "10px solid red";
+    playerPcContainer.style.border = "10px solid green";
     pcPoints += 1;
   
   } else if (matchResult === "tieOpp") {
 
-    pcChoice.textContent = "It's a tie!";
-    result.textContent = playerElement + " and " + pcElement + " are opposite elements";
-    playerContainer.style.border = "10px solid black";
-    pcContainer.style.border = "10px solid white";
+    result.textContent = "It's a tie!";
+    match.textContent = playerElement + " and " + pcElement + " are opposite elements";
+    playerImgContainer.style.border = "10px solid black";
+    playerPcContainer.style.border = "10px solid white";
 
   } else {
 
-    pcChoice.textContent = "It's a tie!";
-    result.textContent = "They are the same element";
-    playerContainer.style.border = "10px solid white";
-    pcContainer.style.border = "10px solid white";
+    result.textContent = "It's a tie!";
+    match.textContent = "They are the same element";
+    playerImgContainer.style.border = "10px solid white";
+    playerPcContainer.style.border = "10px solid white";
   }
 
   playerScore.textContent = playerPoints;
@@ -178,9 +178,9 @@ function checkGameOver() {
   if (playerPoints === 5 || pcPoints === 5) {
   
     if (playerPoints === 5) {
-      winner.textContent = "Player won!";
+      winner.textContent = "Congratulations! You've won the game";
     } else {
-      winner.textContent = "Computer won!";
+      winner.textContent = "Boo hoo... You've lost the game";
     }
 
     playerPoints = 0;
