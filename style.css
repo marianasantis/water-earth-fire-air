@@ -105,6 +105,13 @@ button {
   padding: 10px;
 }
 
-.footer p {
+.footer .container {
   display: flex;
+  align-items: center;
+}
+
+.footer img {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
 }
