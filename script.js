@@ -11,6 +11,10 @@ let pcContainer = document.querySelector(".pc-container");
 let playerScore = document.querySelector(".player-score");
 let pcScore = document.querySelector(".pc-score");
 let buttons = document.querySelectorAll("button");
+let waterSound = document.querySelector(".water-sound");
+let earthSound = document.querySelector(".earth-sound");
+let fireSound = document.querySelector(".fire-sound");
+let airSound = document.querySelector(".air-sound");
 
 buttons.forEach((button) => {
 
@@ -113,15 +117,16 @@ winner.textContent = "";
   checkGameOver();
 }
 
-function changeDom (playerEle, pcEle, matchResult) {
+function changeDom (playerElement, pcElement, matchResult) {
 
-  playerImg.src = "./images/" + playerEle + ".png"  
-  pcImg.src = "./images/" + pcEle + ".png" 
+  playerImg.src = "./images/" + playerElement + ".png"  
+  pcImg.src = "./images/" + pcElement + ".png" 
+  playSound(playerElement);
 
   if (matchResult === "playerWins") {
 
   pcChoice.textContent = "You win!";
-  result.textContent = playerEle + " beats " + pcEle;
+  result.textContent = playerElement + " beats " + pcElement;
   playerContainer.style.border = "10px solid green";
   pcContainer.style.border = "10px solid red";
   playerPoints += 1;  
@@ -129,7 +134,7 @@ function changeDom (playerEle, pcEle, matchResult) {
   } else if (matchResult === "pcWins") {
     
     pcChoice.textContent = "You lose!";
-    result.textContent = pcEle + " beats " + playerEle;
+    result.textContent = pcElement + " beats " + playerElement;
     playerContainer.style.border = "10px solid red";
     pcContainer.style.border = "10px solid green";
     pcPoints += 1;
@@ -137,7 +142,7 @@ function changeDom (playerEle, pcEle, matchResult) {
   } else if (matchResult === "tieOpp") {
 
     pcChoice.textContent = "It's a tie!";
-    result.textContent = playerEle + " and " + pcEle + " are opposite elements";
+    result.textContent = playerElement + " and " + pcElement + " are opposite elements";
     playerContainer.style.border = "10px solid black";
     pcContainer.style.border = "10px solid white";
 
@@ -153,6 +158,21 @@ function changeDom (playerEle, pcEle, matchResult) {
   pcScore.textContent = pcPoints;
 }
 
+function playSound(elementClicked) {
+
+  if (elementClicked === "Water") {
+    waterSound.play();
+  } else if (elementClicked === "Earth") {
+    earthSound.play();
+  } else if (elementClicked === "Fire") {
+    fireSound.play();
+  } else {
+    airSound.play();
+  }
+}
+
+
+
 function checkGameOver() {
 
   if (playerPoints === 5 || pcPoints === 5) {
@@ -162,7 +182,7 @@ function checkGameOver() {
     } else {
       winner.textContent = "Computer won!";
     }
-    
+
     playerPoints = 0;
     pcPoints = 0;
   }
