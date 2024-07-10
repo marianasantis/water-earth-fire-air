@@ -18,7 +18,11 @@ const gameOverModal = document.querySelector(".end.modal");
 const endMsg = document.querySelector(".end-message");
 const endImg = document.querySelector(".end-image");
 const playAgainBtn = document.querySelector(".play-again");
-const overlay = document.querySelector(".overlay");
+const endOverlay = document.querySelector(".end.overlay");
+const rulesBtn = document.querySelector(".rules-btn");
+const closeBtn = document.querySelector(".close-btn");
+const tutorialModal = document.querySelector(".tutorial.modal");
+const tutorialOverlay = document.querySelector(".tutorial.overlay");
 
 
 elementBtns.forEach((btn) => {
@@ -179,7 +183,7 @@ function checkGameOver() {
   if (playerPoints === 5 || pcPoints === 5) {
 
     gameOverModal.classList.remove("hidden");
-    overlay.classList.remove("hidden");
+    endOverlay.classList.remove("hidden");
 
     if (playerPoints === 5) {
       endMsg.textContent = "Congratulations! You've won the game";
@@ -195,7 +199,7 @@ function checkGameOver() {
 
 playAgainBtn.addEventListener("click", () => {
   gameOverModal.classList.add("hidden");
-  overlay.classList.add("hidden");
+  endOverlay.classList.add("hidden");
   match.textContent = "Score 5 points to win the game";
   playerImg.src = "./images/momo.png";
   pcImg.src = "./images/appa.png";
@@ -207,3 +211,13 @@ playAgainBtn.addEventListener("click", () => {
   pcScore.textContent = pcPoints;
   result.textContent = "Choose an element";
 });
+
+closeBtn.addEventListener("click", () => {
+  tutorialModal.classList.add("hidden");
+  tutorialOverlay.classList.add("hidden");
+});
+
+rulesBtn.addEventListener("click", () => {
+  window.open("https://www.youtube.com/watch?v=xvFZjo5PgG0", "_blank");
+});
+

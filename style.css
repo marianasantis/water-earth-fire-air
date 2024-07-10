@@ -178,7 +178,7 @@ button {
   top: 15%;
   background-image: url("./images/bg2.png");
   background-size: cover;
-  height: 700px;
+  height: 710px;
   width: 1500px;
   border-radius: 50px;
 }
@@ -189,14 +189,25 @@ button {
 
 }
 
-.tutorial h1{
-  font-size: 45px;
+.tutorial-header {
+  display: flex;
   width: 100%;
-  text-align: center;
   background-color: #d37736;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  justify-content: center;
 }
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: white;
+}
+
 
 .tutorial h2 {
   color: #d37736;
@@ -215,7 +226,7 @@ button {
   display: none;
 }
 
-.tutorial button {
+.rules-btn {
   font-size: 16px;
   color: white;
   background-color: #d37736;
