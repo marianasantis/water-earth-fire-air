@@ -23,7 +23,8 @@ const rulesBtn = document.querySelector(".rules-btn");
 const closeBtn = document.querySelector(".close-btn");
 const tutorialModal = document.querySelector(".tutorial.modal");
 const tutorialOverlay = document.querySelector(".tutorial.overlay");
-
+const winSound = document.querySelector(".win-sound");
+const lossSound = document.querySelector(".loss-sound");
 
 elementBtns.forEach((btn) => {
 
@@ -189,10 +190,12 @@ function checkGameOver() {
       endMsg.textContent = "Congratulations! You've won the game";
       endImg.src = "./images/momo.gif";
       endImg.alt = "A gif of Momo (Avatar's lemur) dancing"
+      winSound.play();
     } else {
       endMsg.textContent = "Boo hoo... You've lost the game";
       endImg.src = "./images/appa.gif";
       endImg.alt = "A gif of Appa (Avatar's bison) eating hay"
+      lossSound.play();
     }
   }
 }
