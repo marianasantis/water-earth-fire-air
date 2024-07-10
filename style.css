@@ -33,9 +33,13 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #171e28;
-  color: rgba(181, 83, 48, 0.827);
+  color:  rgba(181, 83, 48, 0.827);
   padding: 30px;
   font-size: 30px;
+}
+
+.brown {
+  color: rgba(181, 83, 48, 0.827)
 }
 
 .blue {
@@ -50,8 +54,8 @@ body {
   color: rgba(255, 0, 0, 0.677);
 }
 
-.lblue {
-  color: rgba(127, 255, 249, 0.746);
+.yellow {
+  color: yellow;
 }
 
 .main {
@@ -90,6 +94,11 @@ body {
   justify-content: center;
 }
 
+button {
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
 .element-btns button {
   background-color: #304057;
   width: 200px;
@@ -97,7 +106,6 @@ body {
   margin: 10px;
   border: solid black 10px;
   border-radius: 50px;
-  cursor: pointer;
 }
 
 .footer {
@@ -125,24 +133,25 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 25%;
   background-color: #1F2937;
   align-items: center;
-  justify-content: space-evenly;
-  height: 500px;
-  width: 800px;
-  border-radius: 50px;
+  border-radius: 100px;
   font-size: 25px;
   z-index: 2;
 }
 
-.modal img {
+.end.modal {
+  top: 25%;
+  justify-content: space-evenly;
+  height: 500px;
+  width: 800px;
+}
+
+.end.modal img {
   border: solid black 10px;
 }
 
-.modal button {
-  padding: 18px;
-  font-family: "Roboto", sans-serif;
+.end.modal button {
   font-size: 16px;
   color: white;
   background-color: #4e6482;
@@ -150,7 +159,6 @@ body {
   box-shadow: black 3px 8px;
   border-radius: 5px;
   padding: 15px 50px;
-  cursor: pointer;
 }
 
 .overlay {
@@ -166,6 +174,52 @@ body {
   z-index: 1;
 }
 
+.tutorial.modal {
+  top: 15%;
+  background-image: url("./images/bg2.png");
+  background-size: cover;
+  height: 700px;
+  width: 1500px;
+  border-radius: 50px;
+}
+
+.tutorial .avatarcycle {
+  width: 800px;
+  height: auto;
+
+}
+
+.tutorial h1{
+  font-size: 45px;
+  width: 100%;
+  text-align: center;
+  background-color: #d37736;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.tutorial h2 {
+  color: #d37736;
+  margin-top: 20px
+}
+
+.tutorial .text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: black;
+  padding: 0px 20px;
+}
+
 .hidden {
   display: none;
+}
+
+.tutorial button {
+  font-size: 16px;
+  color: white;
+  background-color: #d37736;
+  border: solid black 2px;
+  border-radius: 5px;
+  padding: 10px 30px;
 }
