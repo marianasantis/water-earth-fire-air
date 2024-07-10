@@ -21,11 +21,15 @@ body {
   min-height: 100vh;
   position: relative;
   padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
   font-family: "Dinofans", Verdana;
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   background-color: #171e28;
@@ -80,24 +84,20 @@ body {
   justify-content: center;
 }
 
-.winner {
-  padding-top: 20px;
-  font-size: 40px;
-}
-
-.buttons {
+.element-btns {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-button {
+.element-btns button {
   background-color: #304057;
   width: 200px;
   height: 200px;
   margin: 10px;
   border: solid black 10px;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .footer {
@@ -119,4 +119,53 @@ button {
   width: 25px;
   height: 25px;
   margin-left: 10px;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25%;
+  background-color: #1F2937;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 500px;
+  width: 800px;
+  border-radius: 50px;
+  font-size: 25px;
+  z-index: 2;
+}
+
+.modal img {
+  border: solid black 10px;
+}
+
+.modal button {
+  padding: 18px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: #4e6482;
+  border: solid black 2px;
+  box-shadow: black 3px 8px;
+  border-radius: 5px;
+  padding: 15px 50px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
 }

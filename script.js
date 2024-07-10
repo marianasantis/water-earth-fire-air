@@ -1,34 +1,37 @@
 let playerPoints = 0;
 let pcPoints = 0;
 
-let match = document.querySelector(".match");
-let winner = document.querySelector(".winner");
-let result = document.querySelector(".result")
-let playerImg = document.querySelector(".player-img");
-let pcImg = document.querySelector(".pc-img");
-let playerImgContainer = document.querySelector(".player-container .img-container");
-let playerPcContainer = document.querySelector(".pc-container .img-container");
-let playerScore = document.querySelector(".player-score");
-let pcScore = document.querySelector(".pc-score");
-let buttons = document.querySelectorAll("button");
-let waterSound = document.querySelector(".water-sound");
-let earthSound = document.querySelector(".earth-sound");
-let fireSound = document.querySelector(".fire-sound");
-let airSound = document.querySelector(".air-sound");
+const match = document.querySelector(".match");
+const result = document.querySelector(".result")
+const playerImg = document.querySelector(".player-img");
+const pcImg = document.querySelector(".pc-img");
+const playerImgContainer = document.querySelector(".player-container .img-container");
+const playerPcContainer = document.querySelector(".pc-container .img-container");
+const playerScore = document.querySelector(".player-score");
+const pcScore = document.querySelector(".pc-score");
+const elementBtns = document.querySelectorAll(".element-btns button");
+const waterSound = document.querySelector(".water-sound");
+const earthSound = document.querySelector(".earth-sound");
+const fireSound = document.querySelector(".fire-sound");
+const airSound = document.querySelector(".air-sound");
+const gameOverModal = document.querySelector(".modal");
+const endMsg = document.querySelector(".end-message");
+const endImg = document.querySelector(".end-image");
+const playAgainBtn = document.querySelector(".play-again");
+const overlay = document.querySelector(".overlay");
 
-buttons.forEach((button) => {
 
-  button.addEventListener("click", () => {
+elementBtns.forEach((btn) => {
 
-    let playerSelection = parseInt(button.id);
+  btn.addEventListener("click", () => {
+
+    let playerSelection = parseInt(btn.id);
     let computerSelection = Math.floor(Math.random() * 4);
     playRound(playerSelection, computerSelection);
   });
 });
 
 function playRound(playerSelection, computerSelection) {
-
-winner.textContent = "";
 
   if (playerSelection === 0) { 
     
@@ -171,21 +174,36 @@ function playSound(elementClicked) {
   }
 }
 
-
-
 function checkGameOver() {
 
   if (playerPoints === 5 || pcPoints === 5) {
-  
-    if (playerPoints === 5) {
-      winner.textContent = "Congratulations! You've won the game";
-    } else {
-      winner.textContent = "Boo hoo... You've lost the game";
-    }
 
-    playerPoints = 0;
-    pcPoints = 0;
+    gameOverModal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+
+    if (playerPoints === 5) {
+      endMsg.textContent = "Congratulations! You've won the game";
+      endImg.src = "./images/momo.gif";
+      endImg.alt = "A gif of Momo (Avatar's lemur) dancing"
+    } else {
+      endMsg.textContent = "Boo hoo... You've lost the game";
+      endImg.src = "./images/appa.gif";
+      endImg.alt = "A gif of Appa (Avatar's bison) eating hay"
+    }
   }
 }
 
-
+playAgainBtn.addEventListener("click", () => {
+  gameOverModal.classList.add("hidden");
+  overlay.classList.add("hidden");
+  match.textContent = "Score 5 points to win the game";
+  playerImg.src = "./images/momo.png";
+  pcImg.src = "./images/appa.png";
+  playerImgContainer.style.border = "";
+  playerPcContainer.style.border = "";
+  playerPoints = 0;
+  pcPoints = 0;
+  playerScore.textContent = playerPoints;
+  pcScore.textContent = pcPoints;
+  result.textContent = "Choose an element";
+});
