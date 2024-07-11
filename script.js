@@ -1,30 +1,30 @@
+const matchInfo = document.getElementById("match-info");
+const resultInfo = document.getElementById("result-info")
+const playerImg = document.getElementById("player-img");
+const pcImg = document.getElementById("pc-img");
+const playerImgContainer = document.querySelector("#player-container .img-container");
+const playerPcContainer = document.querySelector("#pc-container .img-container");
+const playerScore = document.getElementById("player-score");
+const pcScore = document.getElementById("pc-score");
+const elementBtns = document.querySelectorAll("#element-btns button");
+const waterSound = document.getElementById("water-sound");
+const earthSound = document.getElementById("earth-sound");
+const fireSound = document.getElementById("fire-sound");
+const airSound = document.getElementById("air-sound");
+const gameOverModal = document.getElementById("end-modal");
+const endMsg = document.getElementById("end-message");
+const endImg = document.getElementById("end-image");
+const playAgainBtn = document.getElementById("end-button");
+const endOverlay = document.getElementById("end-overlay");
+const rulesBtn = document.getElementById("rules-btn");
+const closeBtn = document.getElementById("close-btn");
+const tutorialModal = document.getElementById("tutorial-modal");
+const tutorialOverlay = document.getElementById("tutorial-overlay");
+const winSound = document.getElementById("win-sound");
+const lossSound = document.getElementById("loss-sound");
+
 let playerPoints = 0;
 let pcPoints = 0;
-
-const match = document.querySelector(".match");
-const result = document.querySelector(".result")
-const playerImg = document.querySelector(".player-img");
-const pcImg = document.querySelector(".pc-img");
-const playerImgContainer = document.querySelector(".player-container .img-container");
-const playerPcContainer = document.querySelector(".pc-container .img-container");
-const playerScore = document.querySelector(".player-score");
-const pcScore = document.querySelector(".pc-score");
-const elementBtns = document.querySelectorAll(".element-btns button");
-const waterSound = document.querySelector(".water-sound");
-const earthSound = document.querySelector(".earth-sound");
-const fireSound = document.querySelector(".fire-sound");
-const airSound = document.querySelector(".air-sound");
-const gameOverModal = document.querySelector(".end.modal");
-const endMsg = document.querySelector(".end-message");
-const endImg = document.querySelector(".end-image");
-const playAgainBtn = document.querySelector(".play-again");
-const endOverlay = document.querySelector(".end.overlay");
-const rulesBtn = document.querySelector(".rules-btn");
-const closeBtn = document.querySelector(".close-btn");
-const tutorialModal = document.querySelector(".tutorial.modal");
-const tutorialOverlay = document.querySelector(".tutorial.overlay");
-const winSound = document.querySelector(".win-sound");
-const lossSound = document.querySelector(".loss-sound");
 
 elementBtns.forEach((btn) => {
 
@@ -133,31 +133,31 @@ function changeDom (playerElement, pcElement, matchResult) {
 
   if (matchResult === "playerWins") {
 
-  result.textContent = "You win!";
-  match.textContent = playerElement + " beats " + pcElement;
+  resultInfo.textContent = "You win!";
+  matchInfo.textContent = playerElement + " beats " + pcElement;
   playerImgContainer.style.border = "10px solid green";
   playerPcContainer.style.border = "10px solid red";
   playerPoints += 1;  
 
   } else if (matchResult === "pcWins") {
     
-    result.textContent = "You lose!";
-    match.textContent = pcElement + " beats " + playerElement;
+    resultInfo.textContent = "You lose!";
+    matchInfo.textContent = pcElement + " beats " + playerElement;
     playerImgContainer.style.border = "10px solid red";
     playerPcContainer.style.border = "10px solid green";
     pcPoints += 1;
   
   } else if (matchResult === "tieOpp") {
 
-    result.textContent = "It's a tie!";
-    match.textContent = playerElement + " and " + pcElement + " are opposite elements";
+    resultInfo.textContent = "It's a tie!";
+    matchInfo.textContent = playerElement + " and " + pcElement + " are opposite elements";
     playerImgContainer.style.border = "10px solid black";
     playerPcContainer.style.border = "10px solid white";
 
   } else {
 
-    result.textContent = "It's a tie!";
-    match.textContent = "They are the same element";
+    resultInfo.textContent = "It's a tie!";
+    matchInfo.textContent = "They are the same element";
     playerImgContainer.style.border = "10px solid white";
     playerPcContainer.style.border = "10px solid white";
   }
@@ -203,7 +203,7 @@ function checkGameOver() {
 playAgainBtn.addEventListener("click", () => {
   gameOverModal.classList.add("hidden");
   endOverlay.classList.add("hidden");
-  match.textContent = "Score 5 points to win the game";
+  matchInfo.textContent = "Score 5 points to win the game";
   playerImg.src = "./images/momo.png";
   pcImg.src = "./images/appa.png";
   playerImgContainer.style.border = "";
@@ -212,7 +212,7 @@ playAgainBtn.addEventListener("click", () => {
   pcPoints = 0;
   playerScore.textContent = playerPoints;
   pcScore.textContent = pcPoints;
-  result.textContent = "Choose an element";
+  resultInfo.textContent = "Choose an element";
 });
 
 closeBtn.addEventListener("click", () => {

@@ -88,7 +88,7 @@ body {
   justify-content: center;
 }
 
-.element-btns {
+#element-btns {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -99,7 +99,7 @@ button {
   font-family: "Roboto", sans-serif;
 }
 
-.element-btns button {
+#element-btns button {
   background-color: #304057;
   width: 200px;
   height: 200px;
@@ -140,18 +140,18 @@ button {
   z-index: 2;
 }
 
-.end.modal {
+#end-modal {
   top: 25%;
   justify-content: space-evenly;
   height: 500px;
   width: 800px;
 }
 
-.end.modal img {
+#end-img {
   border: solid black 10px;
 }
 
-.end.modal button {
+#end-button {
   font-size: 16px;
   color: white;
   background-color: #4e6482;
@@ -174,7 +174,7 @@ button {
   z-index: 1;
 }
 
-.tutorial.modal {
+#tutorial-modal {
   top: 15%;
   background-image: url("./images/bg2.png");
   background-size: cover;
@@ -183,7 +183,7 @@ button {
   border-radius: 50px;
 }
 
-.tutorial .avatarcycle {
+#tutorial1-img {
   width: 800px;
   height: auto;
 
@@ -198,7 +198,7 @@ button {
   justify-content: center;
 }
 
-.close-btn {
+#close-btn {
   position: absolute;
   top: 12px;
   right: 30px;
@@ -209,12 +209,12 @@ button {
 }
 
 
-.tutorial h2 {
+#tutorial1-header {
   color: #d37736;
   margin-top: 20px
 }
 
-.tutorial .text {
+#tutorial1-text {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -226,7 +226,7 @@ button {
   display: none;
 }
 
-.rules-btn {
+#rules-btn {
   font-size: 16px;
   color: white;
   background-color: #d37736;

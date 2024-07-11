@@ -7,24 +7,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <audio class="water-sound" src="./audios/water.wav"></audio>
-  <audio class="earth-sound" src="./audios/earth.wav"></audio>
-  <audio class="fire-sound" src="./audios/fire.wav"></audio>
-  <audio class="air-sound" src="./audios/air.wav"></audio>
-  <audio class="win-sound" src="./audios/win.wav"></audio>
-  <audio class="loss-sound" src="./audios/loss.wav"></audio>
+  <audio id="water-sound" src="./audios/water.wav"></audio>
+  <audio id="earth-sound" src="./audios/earth.wav"></audio>
+  <audio id="fire-sound" src="./audios/fire.wav"></audio>
+  <audio id="air-sound" src="./audios/air.wav"></audio>
+  <audio id="win-sound" src="./audios/win.wav"></audio>
+  <audio id="loss-sound" src="./audios/loss.wav"></audio>
   
-  <div class="tutorial modal">
-
+  <div id="tutorial-modal" class="modal">
     <div class="tutorial-header">
       <h1>Tutorial</h1>
-      <button class="close-btn">X</button>
+      <button id="close-btn">X</button>
     </div>
-    
-    <h2>The Avatar Cycle</h2>
-    <img class="avatarcycle" src="./images/avatarcycle.png"> 
-    
-    <div class="text">
+    <h2 id="tutorial1-header">The Avatar Cycle</h2>
+    <img id="tutorial1-img" src="./images/avatarcycle.png"> 
+    <div id="tutorial1-text">
       <p>
         <span class="blue">Water </span><span class="green">Earth</span><span class="red"> Fire </span><span class="yellow">Air</span> is a version of Rock Paper Scissors in the <span class="brown">Avatar The Last Airbender</span> Universe.
       </p>
@@ -35,40 +32,33 @@
         The picture above illustrates it well (<span class="green">Earth Nation Avatar </span> > <span class="red">Fire Nation Avatar </span> > <span class="yellow">Air Nation Avatar </span> > <span class="blue ">Water Nation Avatar </span> > <span class="green">Earth Nation Avatar </span> again and so on...)
       </p>
     </div>
-
-    <button class="rules-btn">Rules</button>
-
+    <button id="rules-btn">Rules</button>
   </div>
 
-  <div class="tutorial overlay"></div>
-
+  <div id="tutorial-overlay" class="overlay"></div>
   <div class="header">
     <h1><span class="blue">Water</span> <span class="green">Earth</span> <span class="red">Fire</span>  <span class="yellow">Air</span></h1> 
     <h3>Avatar The Last Airbender</h2>
   </div>
   
   <div class="main">
-
-    <h2 class="match">Score 5 points to win the game</h3>
-
+    <h2 id="match-info">Score 5 points to win the game</h3>
     <div class="choices">
-      <div class="player-container">
+      <div id="player-container">
         <div class="img-container">
-          <img class="player-img" src="./images/momo.png" alt="a picture of Momo, a winged lemur and a loyal companion of Avatar Aang and his friends">
+          <img id="player-img" src="./images/momo.png" alt="a picture of Momo, a winged lemur and a loyal companion of Avatar Aang and his friends">
         </div>
-        <p class="score">Player:<span class="player-score">0</span></p>
+        <p class="score">Player:<span id="player-score">0</span></p>
       </div>
-
-      <div class="pc-container">
+      <div id="pc-container">
         <div class="img-container">
-          <img class="pc-img" src="./images/appa.png" alt="a picture of Appa, Avatar Aang's loyal sky bison">
+          <img id="pc-img" src="./images/appa.png" alt="a picture of Appa, Avatar Aang's loyal sky bison">
         </div>
-        <p class="score">Computer:<span class="pc-score">0</span></p>
+        <p class="score">Computer:<span id="pc-score">0</span></p>
       </div>
     </div>
-
-    <h1 class="result">Choose an element</h1>
-    <div class="element-btns">
+    <h1 id="result-info">Choose an element</h1>
+    <div id="element-btns">
       <button id="0">
         <img src="./images/Water.png" alt="a symbol of the water element" class="water-img">
       </button>
@@ -81,7 +71,6 @@
       <button id="3">
         <img src="./images/Air.png" alt="a symbol of the air element" class="air-img"></button>
     </div>
-
   </div>
 
   <div class="footer">
@@ -93,15 +82,13 @@
     </div>
   </div>
 
-  <div class="end modal hidden">
-    <h2 class="end-message">Congrats! You've won the game</h2>
-    <img class="end-image">
-    <button class="play-again">Play again</button>
+  <div id="end-modal" class="modal hidden">
+    <h2 id="end-message">Congrats! You've won the game</h2>
+    <img id="end-image">
+    <button id="end-button">Play again</button>
   </div>
 
-  <div class="end overlay hidden"></div>
-
-  
+  <div id="end-overlay" class="overlay hidden"></div>
 </div>
   <script src="./script.js"></script>
 </body>
