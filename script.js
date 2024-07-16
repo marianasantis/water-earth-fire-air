@@ -16,10 +16,12 @@ const endMsg = document.getElementById("end-message");
 const endImg = document.getElementById("end-image");
 const playAgainBtn = document.getElementById("end-button");
 const endOverlay = document.getElementById("end-overlay");
+const avatarHeader = document.getElementById("tutorial1-header");
+
 const rulesBtn = document.getElementById("rules-btn");
-const closeBtn = document.getElementById("close-btn");
-const tutorialModal = document.getElementById("tutorial-modal");
-const tutorialOverlay = document.getElementById("tutorial-overlay");
+const avatarCloseBtn = document.getElementById("avatar-close-btn");
+const avatarModal = document.getElementById("avatar-modal");
+const avatarOverlay = document.getElementById("avatar-overlay");
 const winSound = document.getElementById("win-sound");
 const lossSound = document.getElementById("loss-sound");
 
@@ -215,9 +217,9 @@ playAgainBtn.addEventListener("click", () => {
   resultInfo.textContent = "Choose an element";
 });
 
-closeBtn.addEventListener("click", () => {
-  tutorialModal.classList.add("hidden");
-  tutorialOverlay.classList.add("hidden");
+avatarCloseBtn.addEventListener("click", () => {
+  avatarModal.classList.add("hidden");
+  avatarOverlay.classList.add("hidden");
 });
 
 rulesBtn.addEventListener("click", () => {

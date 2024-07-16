@@ -174,7 +174,7 @@ button {
   z-index: 1;
 }
 
-#tutorial-modal {
+.tutorial-modal {
   top: 12%;
   background-image: url("./images/bg2.png");
   background-size: cover;
@@ -200,7 +200,7 @@ button {
   justify-content: center;
 }
 
-#close-btn {
+.close-btn {
   position: absolute;
   top: 12px;
   right: 30px;
