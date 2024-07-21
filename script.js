@@ -1,3 +1,19 @@
+const gameOverModal = document.getElementById("end-modal");
+const endMsg = document.getElementById("end-message");
+const endImg = document.getElementById("end-image");
+const playAgainBtn = document.getElementById("end-button");
+const endOverlay = document.getElementById("end-overlay");
+
+const avatarModal = document.getElementById("avatar-modal");
+const avatarCloseBtn = document.getElementById("avatar-close-btn");
+const rulesBtn = document.getElementById("rules-btn");
+const avatarOverlay = document.getElementById("avatar-overlay");
+
+const rulesModal = document.getElementById("rules-modal");
+const rulesCloseBtn = document.getElementById("rules-close-btn");
+const playBtn = document.getElementById("play-btn");
+const rulesOverlay = document.getElementById("rules-overlay");
+
 const matchInfo = document.getElementById("match-info");
 const resultInfo = document.getElementById("result-info")
 const playerImg = document.getElementById("player-img");
@@ -7,21 +23,11 @@ const playerPcContainer = document.querySelector("#pc-container .img-container")
 const playerScore = document.getElementById("player-score");
 const pcScore = document.getElementById("pc-score");
 const elementBtns = document.querySelectorAll("#element-btns button");
+
 const waterSound = document.getElementById("water-sound");
 const earthSound = document.getElementById("earth-sound");
 const fireSound = document.getElementById("fire-sound");
 const airSound = document.getElementById("air-sound");
-const gameOverModal = document.getElementById("end-modal");
-const endMsg = document.getElementById("end-message");
-const endImg = document.getElementById("end-image");
-const playAgainBtn = document.getElementById("end-button");
-const endOverlay = document.getElementById("end-overlay");
-const avatarHeader = document.getElementById("tutorial1-header");
-
-const rulesBtn = document.getElementById("rules-btn");
-const avatarCloseBtn = document.getElementById("avatar-close-btn");
-const avatarModal = document.getElementById("avatar-modal");
-const avatarOverlay = document.getElementById("avatar-overlay");
 const winSound = document.getElementById("win-sound");
 const lossSound = document.getElementById("loss-sound");
 
@@ -223,6 +229,13 @@ avatarCloseBtn.addEventListener("click", () => {
 });
 
 rulesBtn.addEventListener("click", () => {
-  window.open("https://www.youtube.com/watch?v=xvFZjo5PgG0", "_blank");
+  avatarModal.classList.add("hidden");
+  avatarOverlay.classList.add("hidden");
+  rulesModal.classList.remove("hidden");
+  rulesOverlay.classList.remove("hidden");
 });
 
+rulesCloseBtn.addEventListener("click", () => {
+  rulesModal.classList.add("hidden");
+  rulesOverlay.classList.add("hidden");
+});

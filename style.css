@@ -35,7 +35,7 @@ body {
   background-color: #171e28;
   color:  rgba(181, 83, 48, 0.827);
   padding: 30px;
-  font-size: 30px;
+  font-size: 3vh;
 }
 
 .brown {
@@ -133,7 +133,6 @@ button {
   display: flex;
   flex-direction: column;
   position: absolute;
-  background-color: #1F2937;
   align-items: center;
   border-radius: 100px;
   font-size: 25px;
@@ -143,6 +142,7 @@ button {
 #end-modal {
   top: 25%;
   justify-content: space-evenly;
+  background-color: #1F2937;
   height: 500px;
   width: 800px;
 }
@@ -175,20 +175,13 @@ button {
 }
 
 .tutorial-modal {
-  top: 12%;
+  top: 8%;
   background-image: url("./images/bg2.png");
   background-size: cover;
-  min-height: 70%;
-  min-width: 100%;
+  width: 95%;
+  max-height: 95vh;
   border-radius: 50px;
-  gap: 20px;
   padding-bottom: 1%;
-}
-
-#tutorial1-img {
-  width: 50%;
-  height: auto;
-
 }
 
 .tutorial-header {
@@ -210,14 +203,11 @@ button {
   background-color: white;
 }
 
-#tutorial1-header {
+.tutorial-header2 {
   color: #d37736;
 }
 
-#tutorial1-text {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.tutorial-text {
   color: black;
   padding: 0px 20px;
 }
@@ -226,11 +216,74 @@ button {
   display: none;
 }
 
-#rules-btn {
+.tutorial-btn {
   font-size: 16px;
   color: white;
   background-color: #d37736;
   border: solid black 2px;
   border-radius: 5px;
   padding: 10px 30px;
+}
+
+#avatar-img {
+  width: 50%;
+}
+
+#avatar-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  padding-bottom: 2vh;
+}
+
+#rules-medias {
+  display: flex;
+  justify-content: space-around;
+}
+
+.rules-img {
+  height: 35vh;
+}
+
+#rules-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  gap: 3vh;
+}
+
+#rules-imgs {
+  display: flex;
+  justify-content: center;
+}
+
+#rules-items {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.rules-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 33%;
+  justify-content: space-evenly;
+}
+
+.item-box{
+  border: dashed black 6px;
+  width: fit-content;
+  padding: 50px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  align-self: center;
+}
+
+#play-container {
+  display: flex;
+  flex-direction: column;
+  width: 28vw;
+  align-self: center;
 }
