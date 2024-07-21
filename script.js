@@ -235,7 +235,10 @@ rulesBtn.addEventListener("click", () => {
   rulesOverlay.classList.remove("hidden");
 });
 
-rulesCloseBtn.addEventListener("click", () => {
+function closesAllRules() {
   rulesModal.classList.add("hidden");
   rulesOverlay.classList.add("hidden");
-});
+}
+
+rulesCloseBtn.addEventListener("click", closesAllRules);
+playBtn.addEventListener("click", closesAllRules);
