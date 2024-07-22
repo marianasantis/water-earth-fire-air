@@ -66,6 +66,7 @@ body {
 .main {
   padding: 2rem;
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
 }
@@ -115,8 +116,6 @@ button {
 
 .footer {
   background-color: #171e28;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -184,7 +183,6 @@ button {
   background-image: url("./images/bg2.png");
   background-size: cover;
   width: 98vw;
-  max-height: 95vh;
   border-radius: 3rem;
   padding-bottom: 1.5rem;
 }
@@ -242,25 +240,10 @@ button {
   padding-bottom: 1.5rem;
 }
 
-#rules-medias {
+#rules-gif {
   display: flex;
   justify-content: space-around;
   position: relative;
-}
-
-.rules-img {
-  width: 20vw;
-  position: absolute;
-}
-
-#element-img {
-  bottom: 16rem;
-  left: 80vw;
-}
-
-#playing-img {
-  bottom: 14rem;
-  right: 79vw;
 }
 
 #rules-content {
@@ -272,9 +255,9 @@ button {
 
 #rules-items {
   display: flex;
-  justify-content: center;
   align-items: center;
   padding-top: 2rem;
+  justify-content: space-evenly;
 }
 
 .rules-item {
@@ -282,22 +265,27 @@ button {
   flex-direction: column;
   text-align: center;
   max-width: 33%;
+  width: 28rem;
+  height: 20rem;
 }
 
 .item-box{
   border: dashed black 6px;
-  width: fit-content;
-  padding: 3.1rem;
+  height: inherit;
+  width: inherit;
   margin-top: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  align-self: center;
+  justify-content: center;
 }
 
 #play-container {
   display: flex;
   flex-direction: column;
-  width: 40rem;
+  width: 30rem;
   align-self: center;
+  margin-top: 2rem;
 }
+
+
