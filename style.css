@@ -14,13 +14,18 @@
   box-sizing: border-box;
 }
 
+html,body
+  {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+  }
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: #1F2937;
   color: white;
-  min-height: 100vh;
   position: relative;
-  padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,13 +34,13 @@ body {
 .header {
   font-family: "Dinofans", Verdana;
   display: flex;
-  width: 100%;
+  min-width: 100vw;
   flex-direction: column;
   align-items: center;
   background-color: #171e28;
   color:  rgba(181, 83, 48, 0.827);
-  padding: 30px;
-  font-size: 3vh;
+  padding: 2rem;
+  font-size: 1.7rem;
 }
 
 .brown {
@@ -59,31 +64,31 @@ body {
 }
 
 .main {
-  padding: 30px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .choices {
-  padding: 30px;
+  padding: 2rem;
   display: flex;
-  gap: 100px;
+  gap: 6rem;
 }
 
 .img-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 220px;
-  height: 220px;
+  width: 14rem;
+  height: 14rem;
   background-color:  #ffffffc4;
-  border-radius: 50px;
-  border: solid black 5px;
+  border-radius: 3rem;
+  border: solid black 0.35rem;
 }
 
 .score {
-  padding: 20px;
+  padding: 1.5rem;
   display: flex;
   justify-content: center;
 }
@@ -101,11 +106,11 @@ button {
 
 #element-btns button {
   background-color: #304057;
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-  border: solid black 10px;
-  border-radius: 50px;
+  width: 12.5rem;
+  height: 12.5rem;
+  margin: 0.7rem;
+  border: solid black 0.7rem;
+  border-radius: 3rem;
 }
 
 .footer {
@@ -115,7 +120,7 @@ button {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 0.5rem;
 }
 
 .footer .container {
@@ -124,9 +129,9 @@ button {
 }
 
 .footer img {
-  width: 25px;
-  height: 25px;
-  margin-left: 10px;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: 0.5rem;
 }
 
 .modal {
@@ -134,8 +139,8 @@ button {
   flex-direction: column;
   position: absolute;
   align-items: center;
-  border-radius: 100px;
-  font-size: 25px;
+  border-radius: 6.2rem;
+  font-size: 1.5rem;
   z-index: 2;
 }
 
@@ -143,22 +148,22 @@ button {
   top: 25%;
   justify-content: space-evenly;
   background-color: #1F2937;
-  height: 500px;
-  width: 800px;
+  height: 31rem;
+  width: 50rem;
 }
 
-#end-img {
-  border: solid black 10px;
+#end-image {
+  border: solid black 0.4rem;
 }
 
 #end-button {
-  font-size: 16px;
+  font-size: 1rem;
   color: white;
   background-color: #4e6482;
-  border: solid black 2px;
-  box-shadow: black 3px 8px;
-  border-radius: 5px;
-  padding: 15px 50px;
+  border: solid black 0.1rem;
+  box-shadow: black 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  padding: 1rem 3rem;
 }
 
 .overlay {
@@ -170,7 +175,7 @@ button {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(0.2rem);
   z-index: 1;
 }
 
@@ -178,38 +183,39 @@ button {
   top: 8%;
   background-image: url("./images/bg2.png");
   background-size: cover;
-  width: 95%;
+  width: 98vw;
   max-height: 95vh;
-  border-radius: 50px;
-  padding-bottom: 1%;
+  border-radius: 3rem;
+  padding-bottom: 1.5rem;
 }
 
 .tutorial-header {
   display: flex;
   width: 100%;
   background-color: #d37736;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
   justify-content: center;
 }
 
 .close-btn {
   position: absolute;
-  top: 12px;
-  right: 30px;
-  width: 30px;
-  height: 30px;
+  top: 0.75rem;
+  right: 2rem;
+  width: 1.9rem;
+  height: 1.9rem;
   border-radius: 100%;
   background-color: white;
 }
 
 .tutorial-header2 {
+  padding-top: 1rem;
   color: #d37736;
 }
 
 .tutorial-text {
   color: black;
-  padding: 0px 20px;
+  padding: 0 1.25rem;
 }
 
 .hidden {
@@ -217,49 +223,58 @@ button {
 }
 
 .tutorial-btn {
-  font-size: 16px;
+  font-size: 1rem;
   color: white;
   background-color: #d37736;
-  border: solid black 2px;
-  border-radius: 5px;
-  padding: 10px 30px;
+  border: solid black 0.15rem;
+  border-radius: 0.3rem;
+  padding: 0.5rem 2.5rem;
 }
 
 #avatar-img {
-  width: 50%;
+  width: 40rem;
 }
 
 #avatar-text {
   display: flex;
   flex-direction: column;
   gap: 1vh;
-  padding-bottom: 2vh;
+  padding-bottom: 1.5rem;
 }
 
 #rules-medias {
   display: flex;
   justify-content: space-around;
+  position: relative;
 }
 
 .rules-img {
-  height: 35vh;
+  width: 20vw;
+  position: absolute;
+}
+
+#element-img {
+  bottom: 16rem;
+  left: 80vw;
+}
+
+#playing-img {
+  bottom: 14rem;
+  right: 79vw;
 }
 
 #rules-content {
   display: flex;
   flex-direction: column;
   min-width: 100%;
-  gap: 3vh;
-}
-
-#rules-imgs {
-  display: flex;
-  justify-content: center;
+  gap: 1rem;
 }
 
 #rules-items {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
 }
 
 .rules-item {
@@ -267,23 +282,22 @@ button {
   flex-direction: column;
   text-align: center;
   max-width: 33%;
-  justify-content: space-evenly;
 }
 
 .item-box{
   border: dashed black 6px;
   width: fit-content;
-  padding: 50px;
-  margin-top: 20px;
+  padding: 3.1rem;
+  margin-top: 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 1vh;
+  gap: 0.5rem;
   align-self: center;
 }
 
 #play-container {
   display: flex;
   flex-direction: column;
-  width: 28vw;
+  width: 40rem;
   align-self: center;
 }
