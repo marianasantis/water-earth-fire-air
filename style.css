@@ -18,7 +18,7 @@ html,body
   {
       width: 100%;
       height: 100%;
-      overflow-x: hidden;
+      overflow-x: scroll;
   }
 
 body {
@@ -139,7 +139,7 @@ button {
   position: absolute;
   align-items: center;
   border-radius: 6.2rem;
-  font-size: 1.5rem;
+  font-size: 2vh;
   z-index: 2;
 }
 
@@ -265,19 +265,16 @@ button {
   flex-direction: column;
   text-align: center;
   max-width: 33%;
-  width: 28rem;
-  height: 20rem;
 }
 
 .item-box{
   border: dashed black 6px;
-  height: inherit;
-  width: inherit;
   margin-top: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   justify-content: center;
+  padding: 2rem;
 }
 
 #play-container {
@@ -288,4 +285,6 @@ button {
   margin-top: 2rem;
 }
 
-
+#element-img {
+  width: 30rem;
+}
