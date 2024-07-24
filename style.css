@@ -110,7 +110,6 @@ button {
   width: 12.5rem;
   height: 12.5rem;
   margin: 0.7rem;
-  border: solid black 0.7rem;
   border-radius: 3rem;
 }
 
@@ -139,7 +138,7 @@ button {
   position: absolute;
   align-items: center;
   border-radius: 6.2rem;
-  font-size: 2vh;
+  font-size: 2.5vmin;
   z-index: 2;
 }
 
@@ -193,22 +192,25 @@ button {
   background-color: #d37736;
   border-top-left-radius: 3rem;
   border-top-right-radius: 3rem;
-  justify-content: center;
 }
 
+.tutorial-header h1 {
+  margin: auto;
+}  justify-content: ;
+
 .close-btn {
-  position: absolute;
-  top: 0.75rem;
-  right: 2rem;
-  width: 1.9rem;
-  height: 1.9rem;
+  width: 1.5%;
+  font-size: 1vw;
   border-radius: 100%;
   background-color: white;
+  margin-right: 3vw;
+  align-self: center;
 }
 
 .tutorial-header2 {
   padding-top: 1rem;
   color: #d37736;
+  margin: auto;
 }
 
 .tutorial-text {
@@ -230,7 +232,7 @@ button {
 }
 
 #avatar-img {
-  width: 40rem;
+  width: 45vw;
 }
 
 #avatar-text {
@@ -251,20 +253,35 @@ button {
   flex-direction: column;
   min-width: 100%;
   gap: 1rem;
+  align-items: center;
 }
 
-#rules-items {
+#rules-txt-items {
   display: flex;
   align-items: center;
-  padding-top: 2rem;
-  justify-content: space-evenly;
+  max-width: 80%;
+  gap: 3vw;
+  padding: 2vh;
 }
 
-.rules-item {
+.rules-txt-item {
   display: flex;
   flex-direction: column;
   text-align: center;
-  max-width: 33%;
+  align-items: center;
+  flex: 1;
+  padding: 1rem;
+}
+
+#item1 {
+  border: 0.8rem solid green;
+}
+
+#item2 {
+  border: 0.8rem solid yellow;
+}
+
+.item-header {
 }
 
 .item-box{
@@ -272,19 +289,22 @@ button {
   margin-top: 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  justify-content: center;
-  padding: 2rem;
+  width: fit-content;
+  padding: 0.5rem;
 }
 
 #play-container {
   display: flex;
   flex-direction: column;
-  width: 30rem;
+  width: 30vw;
   align-self: center;
-  margin-top: 2rem;
+  border: 0.5rem solid blue;
+  outline: 0.5rem solid red;
+
 }
 
 #element-img {
-  width: 30rem;
+  width: 12vw;
 }
+
+/* fazer div so pras "headers" do tutorial e outra pra caixa embaixo */ 
