@@ -14,91 +14,6 @@
   <audio id="win-sound" src="./audios/win.wav"></audio>
   <audio id="loss-sound" src="./audios/loss.wav"></audio>
   
-  <div id="avatar-modal" class="modal tutorial-modal">
-    <div class="tutorial-header">
-      <h1>Tutorial</h1>
-      <button id="avatar-close-btn" class="close-btn">X</button>
-    </div>
-    <div>
-      <h2 class="tutorial-header2">The Avatar Cycle</h2>
-    </div>
-    <img id="avatar-img" src="./images/avatarcycle.png"> 
-    <div id="avatar-text" class="tutorial-text">
-      <p>
-        <span class="blue">Water </span><span class="green">Earth</span><span class="red"> Fire </span><span class="yellow">Air</span> is a version of Rock Paper Scissors in the <span class="brown">Avatar The Last Airbender</span> Universe.
-      </p>
-      <p>
-        It's made after the Avatar Cycle, which is the order in which the Avatars are born into one of the Four Nations (<span class="blue">Water </span><span class="green">Earth </span><span class="red">Fire </span> or <span class="yellow"> Air </span> Nation). The cycle is also the order in which each Avatar is supposed to learn these four elements.
-      </p>
-      <p>
-        The picture above illustrates it well (<span class="green">Earth Nation Avatar </span> > <span class="red">Fire Nation Avatar </span> > <span class="yellow">Air Nation Avatar </span> > <span class="blue ">Water Nation Avatar </span> > <span class="green">Earth Nation Avatar </span> again and so on...)
-      </p>
-    </div>
-    <button class="tutorial-btn" id="rules-btn">Rules</button>
-  </div>
-
-  <div id="avatar-overlay" class="overlay"></div>
-  
-  <div id="rules-modal" class="modal tutorial-modal hidden">
-    <div class="tutorial-header">
-      <h1>Tutorial</h1>
-      <button id="rules-close-btn" class="close-btn">X</button>
-    </div>
-    <div>
-      <h2 class="tutorial-header2">Rules</h2>
-    </div>
-    <div id="rules-content">
-      <div id="rules-txt-items" class="tutorial-text">
-        <div id="item1" class="rules-txt-item">
-          <div class="item-header">
-            <h3>
-              The rules to determine which element wins are based on the avatar cycle, so:
-            </h3>
-          </div>
-          <div class="item-box">
-            <p>
-              <span class="blue">Water </span>beats <span class="green">Earth</span>
-            </p>
-            <p>
-              <span class="green">Earth </span>beats <span class="red">Fire</span>
-            </p>
-            <p>
-              <span class="red">Fire </span>beats <span class="yellow">Air</span>
-            </p>
-            <p>
-              <span class="yellow">Air </span>beats <span class="blue">Water</span>
-            </p>
-          </div>
-        </div>
-        <img id="element-img" src="./images/elementcycle.png">
-        <div id="item2" class="rules-txt-item">
-          <div class="item-header">
-            <h3>There are also two types of ties:</h3>
-          </div>
-          <div class="item-box">
-            <p>
-              When the elements are the same
-            </p>
-            <p>
-              When the elements are opposite 
-            </p>
-            <p>
-              For example: <span class="blue">Water</span>&<span class="red">Fire </span> and <span class="green">Earth</span>&<span id="test"class="yellow">Air</span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div id="rules-gif">
-        <div id="play-container">
-          <img src="./images/fight.gif">
-          <button class="tutorial-btn" id="play-btn">Play</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="rules-overlay" class="overlay hidden"></div>
-  
   <div class="header">
     <h1><span class="blue">Water</span> <span class="green">Earth</span> <span class="red">Fire</span>  <span class="yellow">Air</span></h1> 
     <h3>Avatar The Last Airbender</h2>
@@ -109,13 +24,13 @@
     <div class="choices">
       <div id="player-container">
         <div class="img-container">
-          <img id="player-img" src="./images/momo.png" alt="a picture of Momo, a winged lemur and a loyal companion of Avatar Aang and his friends">
+          <img id="player-img" class="user-img" src="./images/momo.png" alt="a picture of Momo, a winged lemur and a loyal companion of Avatar Aang and his friends">
         </div>
         <p class="score">Player:<span id="player-score">0</span></p>
       </div>
       <div id="pc-container">
         <div class="img-container">
-          <img id="pc-img" src="./images/appa.png" alt="a picture of Appa, Avatar Aang's loyal sky bison">
+          <img id="pc-img" class="user-img" src="./images/appa.png" alt="a picture of Appa, Avatar Aang's loyal sky bison">
         </div>
         <p class="score">Computer:<span id="pc-score">0</span></p>
       </div>
@@ -136,6 +51,104 @@
     </div>
   </div>
 
+  <div id="avatar-modal" class="modal tutorial-modal">
+    <div class="modal-header">
+      <h1>Tutorial</h1>
+      <button id="avatar-close-btn" class="close-btn">X</button>
+    </div>
+    <div class="modal-content">
+      <div>
+        <h2 class="content-header">The Avatar Cycle</h2>
+      </div>
+      <img id="avatar-img" src="./images/avatarcycle.png"> 
+      <div id="avatar-text" class="tutorial-text">
+        <p>
+          <span class="blue">Water </span><span class="green">Earth</span><span class="red"> Fire </span><span class="yellow">Air</span> is a version of Rock Paper Scissors in the <span class="brown">Avatar The Last Airbender</span> Universe.
+        </p>
+        <p>
+          It's made after the Avatar Cycle, which is the order in which the Avatars are born into one of the Four Nations (<span class="blue">Water </span><span class="green">Earth </span><span class="red">Fire </span> or <span class="yellow"> Air </span> Nation). The cycle is also the order in which each Avatar is supposed to learn these four elements.
+        </p>
+        <p>
+          The picture above illustrates it well (<span class="green">Earth Nation Avatar </span> > <span class="red">Fire Nation Avatar </span> > <span class="yellow">Air Nation Avatar </span> > <span class="blue ">Water Nation Avatar </span> > <span class="green">Earth Nation Avatar </span> again and so on...)
+        </p>
+      </div>
+      <button class="tutorial-btn" id="rules-btn">Rules</button>
+    </div>
+  </div>
+
+  <div id="avatar-overlay" class="overlay"></div>
+  
+  <div id="rules-modal" class="modal tutorial-modal hidden">
+    <div class="modal-header">
+      <h1>Tutorial</h1>
+      <button id="rules-close-btn" class="close-btn">X</button>
+    </div>
+    <div class="modal-content">
+      <div>
+        <h2 id="rules-header" class="content-header">Rules</h2>
+      </div>
+      <div class="rules-container">
+        <img class="rules-img" src="./images/elementcycle.png">
+        <div class="rules-box">
+          <div class="box-header">The rules to determine which element wins are based on the avatar cycle, so:</div>
+          <div class="box-content">
+            <ul>
+              <li> <span class="blue">Water </span>beats <span class="green">Earth</span> </li>
+              <li> <span class="green">Earth </span>beats <span class="red">Fire</span> </li>
+              <li> <span class="red">Fire </span>beats <span class="yellow">Air</span> </li>
+              <li> <span class="yellow">Air </span>beats <span class="blue">Water</span> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="rules-container">
+        <div id="rules-imgs">
+          <img class="rules-img" src="./images/waterfire.png" alt="">
+          <img class="rules-img" src="./images/earthair.png" alt="">
+        </div>
+        <div class="rules-box">
+          <div class="box-header">
+            There are two types of ties:
+          </div>
+          <div class="box-content">
+            <ul>
+              <li>
+                When the elements are the same
+              </li>
+              <li>
+                When the elements are opposite
+              </li>
+              <li>
+                For example: <span class="blue">Water</span>&<span class="red">Fire </span> and <span class="green">Earth</span>&<span id="test"class="yellow">Air</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button class="tutorial-btn" id="play-btn">Play Game</button>
+    </div>
+  </div>
+<!--
+      <div id="rules-gif">
+        <div id="play-container">
+          <img src="./images/fight.gif">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+  <div id="rules-overlay" class="overlay hidden"></div>
+  
+  <div id="end-modal" class="modal hidden">
+    <h2 id="end-message">Congrats! You've won the game</h2>
+    <img id="end-image">
+    <button id="end-btn">Play again</button>
+  </div>
+
+  <div id="end-overlay" class="overlay hidden"></div>
+</div>
+
   <div class="footer">
     <div class="container">
       <p>Copyright © 2024 Mariana de Santis </p>
@@ -145,14 +158,6 @@
     </div>
   </div>
 
-  <div id="end-modal" class="modal hidden">
-    <h2 id="end-message">Congrats! You've won the game</h2>
-    <img id="end-image">
-    <button id="end-button">Play again</button>
-  </div>
-
-  <div id="end-overlay" class="overlay hidden"></div>
-</div>
   <script src="./script.js"></script>
 </body>
 </html>

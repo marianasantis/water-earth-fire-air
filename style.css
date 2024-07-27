@@ -8,6 +8,26 @@
   src: url("./fonts/Roboto-BoldItalic.ttf");
 }
 
+.brown {
+  color: rgba(181, 83, 48, 0.827)
+}
+
+.blue {
+  color: rgb(0, 30, 255);
+}
+
+.green {
+  color: rgb(3, 144, 3);
+}
+
+.red {
+  color: rgba(255, 0, 0, 0.677);
+}
+
+.yellow {
+  color: yellow;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -39,59 +59,53 @@ body {
   align-items: center;
   background-color: #171e28;
   color:  rgba(181, 83, 48, 0.827);
-  padding: 2rem;
-  font-size: 1.7rem;
-}
-
-.brown {
-  color: rgba(181, 83, 48, 0.827)
-}
-
-.blue {
-  color: rgb(0, 30, 255);
-}
-
-.green {
-  color: rgb(3, 144, 3);
-}
-
-.red {
-  color: rgba(255, 0, 0, 0.677);
-}
-
-.yellow {
-  color: yellow;
+  padding: 3vw;
+  font-size: 2vw;
 }
 
 .main {
-  padding: 2rem;
+  padding: 5vh;
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: center;
 }
 
+#match-info {
+  font-size: 1.8vw;
+}
+
 .choices {
-  padding: 2rem;
+  padding: 2vh;
   display: flex;
-  gap: 6rem;
+  gap: 4vw;
 }
 
 .img-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 14rem;
-  height: 14rem;
+  padding: 2.2vw 2.8vw;
   background-color:  #ffffffc4;
-  border-radius: 3rem;
-  border: solid black 0.35rem;
+  border-radius: 3vw;
+  border: solid black 0.3vw;
+}
+
+.img-container img {
+  width: 8.5vw;
+  height: 9.5vw;
 }
 
 .score {
-  padding: 1.5rem;
+  margin: 1.5vw 0 2vw 0;
   display: flex;
   justify-content: center;
+  font-size: 1.3vw;
+}
+
+#result-info {
+  font-size: 2.2vw;
+  padding-bottom: 1vh;
 }
 
 #element-btns {
@@ -105,12 +119,15 @@ button {
   font-family: "Roboto", sans-serif;
 }
 
+#element-btns img {
+  width: 10vw;
+}
+
 #element-btns button {
   background-color: #304057;
-  width: 12.5rem;
-  height: 12.5rem;
-  margin: 0.7rem;
-  border-radius: 3rem;
+  padding: 6vmin 6vmin;
+  margin: 1vw;
+  border-radius: 4vw;
 }
 
 .footer {
@@ -118,7 +135,8 @@ button {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0.5rem;
+  padding: 0.7vw;
+  font-size: 1.5vw;
 }
 
 .footer .container {
@@ -127,9 +145,9 @@ button {
 }
 
 .footer img {
-  width: 1.6rem;
-  height: 1.6rem;
-  margin-left: 0.5rem;
+  width: 2.5vw;
+  height: 2.5vw;
+  margin-left: 1.5vw;
 }
 
 .modal {
@@ -137,10 +155,123 @@ button {
   flex-direction: column;
   position: absolute;
   align-items: center;
-  border-radius: 6.2rem;
   font-size: 2.5vmin;
   z-index: 2;
 }
+
+.tutorial-modal {
+  top: 8%;
+  width: 95vw;
+}
+
+.modal-content {
+  background-image: url("./images/bg2.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  align-items: center;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  padding-bottom: 2vh ;
+}
+
+.modal-header {
+  display: flex;
+  width: 100%;
+  background-color: #d37736;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+}
+
+.modal-header h1 {
+  margin: auto;
+}
+
+.close-btn {
+  padding: 0.5% 0.6%;
+  font-size: 60%;
+  border-radius: 100%;
+  background-color: white;
+  margin-right: 3vw;
+  align-self: center;
+}
+
+.content-header {
+  padding-top: 2vh;
+  color: #d37736;
+}
+
+.tutorial-text {
+  color: black;
+  padding: 0 1.25rem 2vw 1.25rem;
+}
+
+.tutorial-btn {
+  color: white;
+  background-color: #d37736;
+  border: solid black 0.2vw;
+  border-radius: 0.3rem;
+  padding: 0.8vh 6vw;
+  font-size: inherit;
+}
+
+#avatar-img {
+  width: 45vw;
+}
+
+#avatar-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+#rules-header {
+  margin-bottom: 1vw;
+}
+
+.rules-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3vw;
+  gap: 1.5vw;
+}
+
+.rules-img {
+  width: 15vw;
+  max-width: 50%;
+}
+
+.rules-box {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  border: solid black;
+}
+
+.box-header {
+  background-color: #d37736;
+  text-align: center;
+}
+
+.box-content {
+  color: black;
+  padding: 1vw 2.5vw;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 0.5vw;
+}
+
+
+
+
+
+
+
 
 #end-modal {
   top: 25%;
@@ -148,13 +279,14 @@ button {
   background-color: #1F2937;
   height: 31rem;
   width: 50rem;
+  border-radius: 3rem;  
 }
 
 #end-image {
   border: solid black 0.4rem;
 }
 
-#end-button {
+#end-btn {
   font-size: 1rem;
   color: white;
   background-color: #4e6482;
@@ -177,69 +309,11 @@ button {
   z-index: 1;
 }
 
-.tutorial-modal {
-  top: 8%;
-  background-image: url("./images/bg2.png");
-  background-size: cover;
-  width: 98vw;
-  border-radius: 3rem;
-  padding-bottom: 1.5rem;
-}
-
-.tutorial-header {
-  display: flex;
-  width: 100%;
-  background-color: #d37736;
-  border-top-left-radius: 3rem;
-  border-top-right-radius: 3rem;
-}
-
-.tutorial-header h1 {
-  margin: auto;
-}
-
-.close-btn {
-  width: 1.5%;
-  font-size: 1vw;
-  border-radius: 100%;
-  background-color: white;
-  margin-right: 3vw;
-  align-self: center;
-}
-
-.tutorial-header2 {
-  padding-top: 1rem;
-  color: #d37736;
-}
-
-.tutorial-text {
-  color: black;
-  padding: 0 1.25rem;
-}
 
 .hidden {
   display: none;
 }
 
-.tutorial-btn {
-  font-size: 1rem;
-  color: white;
-  background-color: #d37736;
-  border: solid black 0.15rem;
-  border-radius: 0.3rem;
-  padding: 0.5rem 2.5rem;
-}
-
-#avatar-img {
-  width: 45vw;
-}
-
-#avatar-text {
-  display: flex;
-  flex-direction: column;
-  gap: 1vh;
-  padding-bottom: 1.5rem;
-}
 
 #rules-gif {
   display: flex;
@@ -247,14 +321,8 @@ button {
   position: relative;
 }
 
-#rules-content {
-  display: flex;
-  flex-direction: column;
-  min-width: 100%;
-  gap: 1rem;
-  align-items: center;
-}
 
+/*
 #rules-txt-items {
   display: flex;
   align-items: center;
@@ -307,3 +375,5 @@ button {
 }
 
 /* fazer div so pras "headers" do tutorial e outra pra caixa embaixo */ 
+
+*/

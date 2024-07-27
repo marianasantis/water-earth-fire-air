@@ -1,7 +1,7 @@
 const gameOverModal = document.getElementById("end-modal");
 const endMsg = document.getElementById("end-message");
 const endImg = document.getElementById("end-image");
-const playAgainBtn = document.getElementById("end-button");
+const playAgainBtn = document.getElementById("end-btn");
 const endOverlay = document.getElementById("end-overlay");
 
 const avatarModal = document.getElementById("avatar-modal");
@@ -137,37 +137,38 @@ function changeDom (playerElement, pcElement, matchResult) {
 
   playerImg.src = "./images/" + playerElement + ".png"  
   pcImg.src = "./images/" + pcElement + ".png" 
+
   playSound(playerElement);
 
   if (matchResult === "playerWins") {
 
   resultInfo.textContent = "You win!";
   matchInfo.textContent = playerElement + " beats " + pcElement;
-  playerImgContainer.style.border = "10px solid green";
-  playerPcContainer.style.border = "10px solid red";
+  playerImgContainer.style.border = "0.5vw solid green";
+  playerPcContainer.style.border = "0.5vw solid red";
   playerPoints += 1;  
 
   } else if (matchResult === "pcWins") {
     
     resultInfo.textContent = "You lose!";
     matchInfo.textContent = pcElement + " beats " + playerElement;
-    playerImgContainer.style.border = "10px solid red";
-    playerPcContainer.style.border = "10px solid green";
+    playerImgContainer.style.border = "0.5vw solid red";
+    playerPcContainer.style.border = "0.5vw solid green";
     pcPoints += 1;
   
   } else if (matchResult === "tieOpp") {
 
     resultInfo.textContent = "It's a tie!";
     matchInfo.textContent = playerElement + " and " + pcElement + " are opposite elements";
-    playerImgContainer.style.border = "10px solid black";
-    playerPcContainer.style.border = "10px solid white";
+    playerImgContainer.style.border = "0.5vw solid black";
+    playerPcContainer.style.border = "0.5vw solid white";
 
   } else {
 
     resultInfo.textContent = "It's a tie!";
     matchInfo.textContent = "They are the same element";
-    playerImgContainer.style.border = "10px solid white";
-    playerPcContainer.style.border = "10px solid white";
+    playerImgContainer.style.border = "0.5vw solid white";
+    playerPcContainer.style.border = "0.5vw solid white";
   }
 
   playerScore.textContent = playerPoints;
