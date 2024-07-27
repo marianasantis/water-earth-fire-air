@@ -173,7 +173,7 @@ button {
   align-items: center;
   border-bottom-left-radius: 3rem;
   border-bottom-right-radius: 3rem;
-  padding-bottom: 2vh ;
+  padding-bottom: 2vh;
 }
 
 .modal-header {
@@ -247,7 +247,7 @@ button {
   display: flex;
   flex-direction: column;
   max-width: 50%;
-  border: solid black;
+  border: solid black 0.3vw;
 }
 
 .box-header {
@@ -265,13 +265,6 @@ li {
   list-style: none;
   margin-bottom: 0.5vw;
 }
-
-
-
-
-
-
-
 
 #end-modal {
   top: 25%;
