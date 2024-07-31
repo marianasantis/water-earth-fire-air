@@ -38,7 +38,6 @@ html,body
   {
       width: 100%;
       height: 100%;
-      overflow-x: scroll;
   }
 
 body {
@@ -64,7 +63,7 @@ body {
 }
 
 .main {
-  padding: 5vh;
+  padding: 3vw;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -76,7 +75,7 @@ body {
 }
 
 .choices {
-  padding: 2vh;
+  padding: 2vw;
   display: flex;
   gap: 4vw;
 }
@@ -85,7 +84,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2.2vw 2.8vw;
+  width: 13vw;
+  height: 13vw;
   background-color:  #ffffffc4;
   border-radius: 3vw;
   border: solid black 0.3vw;
@@ -105,13 +105,18 @@ body {
 
 #result-info {
   font-size: 2.2vw;
-  padding-bottom: 1vh;
+  padding: 1vw 0;
 }
 
 #element-btns {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 85vw;
+}
+
+.ele-cont {
+  display: flex;
 }
 
 button {
@@ -125,8 +130,8 @@ button {
 
 #element-btns button {
   background-color: #304057;
-  padding: 6vmin 6vmin;
-  margin: 1vw;
+  padding: 4vw 4vw;
+  margin: 0.5vw;
   border-radius: 4vw;
 }
 
@@ -157,10 +162,10 @@ button {
   align-items: center;
   font-size: 2.5vmin;
   z-index: 2;
+  top: 15vw;
 }
 
 .tutorial-modal {
-  top: 8%;
   width: 95vw;
 }
 
@@ -173,7 +178,7 @@ button {
   align-items: center;
   border-bottom-left-radius: 3rem;
   border-bottom-right-radius: 3rem;
-  padding-bottom: 2vh;
+  padding-bottom: 2vw;
 }
 
 .modal-header {
@@ -182,6 +187,7 @@ button {
   background-color: #d37736;
   border-top-left-radius: 3rem;
   border-top-right-radius: 3rem;
+  position: relative;
 }
 
 .modal-header h1 {
@@ -193,12 +199,13 @@ button {
   font-size: 60%;
   border-radius: 100%;
   background-color: white;
-  margin-right: 3vw;
+  position: absolute;
+  right: 2vw;
   align-self: center;
 }
 
 .content-header {
-  padding-top: 2vh;
+  padding-top: 1.5vw;
   color: #d37736;
 }
 
@@ -238,6 +245,11 @@ button {
   gap: 1.5vw;
 }
 
+#rules-imgs {
+  display: flex;
+  gap: 2vw;
+}
+
 .rules-img {
   width: 15vw;
   max-width: 50%;
@@ -267,26 +279,29 @@ li {
 }
 
 #end-modal {
-  top: 25%;
+  width: 40vw;
+  padding: 3vw;
   justify-content: space-evenly;
   background-color: #1F2937;
-  height: 31rem;
-  width: 50rem;
   border-radius: 3rem;  
+  text-align: center;
+  top: 25vw;
 }
 
 #end-image {
-  border: solid black 0.4rem;
+  margin: 1.5vw 0 1.5vw 0;
+  border: solid black 0.2rem;
+  width: 95%;
 }
 
 #end-btn {
-  font-size: 1rem;
+  font-size: inherit;
   color: white;
   background-color: #4e6482;
-  border: solid black 0.1rem;
-  box-shadow: black 0.2rem 0.5rem;
+  border: solid black 0.2vw;
+  box-shadow: black 0.2vw 0.5vw;
   border-radius: 0.3rem;
-  padding: 1rem 3rem;
+  padding: 1vw 8vw;
 }
 
 .overlay {
