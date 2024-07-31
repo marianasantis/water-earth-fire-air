@@ -136,7 +136,9 @@ function playRound(playerSelection, computerSelection) {
 function changeDom (playerElement, pcElement, matchResult) {
 
   playerImg.src = "./images/" + playerElement + ".png"  
+  playerImg.style.height = "auto";
   pcImg.src = "./images/" + pcElement + ".png" 
+  pcImg.style.height = "auto";
 
   playSound(playerElement);
 
