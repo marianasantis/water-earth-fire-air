@@ -279,13 +279,13 @@ li {
 }
 
 #end-modal {
-  width: 40vw;
+  width: 60vw;
   padding: 3vw;
   justify-content: space-evenly;
   background-color: #1F2937;
   border-radius: 3rem;  
   text-align: center;
-  top: 25vw;
+  top: 15vw;
 }
 
 #end-image {
