@@ -173,8 +173,8 @@ function changeDom (playerElement, pcElement, matchResult) {
     playerPcContainer.style.border = "0.5vw solid white";
   }
 
-  playerScore.textContent = playerPoints;
-  pcScore.textContent = pcPoints;
+  playerScore.textContent = "Player: " + playerPoints;
+  pcScore.textContent = "Computer: " + pcPoints;
 }
 
 function playSound(elementClicked) {
@@ -221,8 +221,8 @@ playAgainBtn.addEventListener("click", () => {
   playerPcContainer.style.border = "";
   playerPoints = 0;
   pcPoints = 0;
-  playerScore.textContent = playerPoints;
-  pcScore.textContent = pcPoints;
+  playerScore.textContent = "Player: ";
+  pcScore.textContent = "Computer: ";
   resultInfo.textContent = "Choose an element";
 });
 
