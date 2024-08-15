@@ -59,6 +59,7 @@ body {
   color:  rgba(181, 83, 48, 0.827);
   padding: 2rem;
   font-size: 2rem;
+  text-wrap: nowrap;
 }
 
 .main {
@@ -331,53 +332,19 @@ li {
   }
 }
 
-@media (max-width: 800px) {
-  #content {
-    flex-direction: column-reverse;
-  }
-
-  #choices-container {
-    flex-direction: row;
-  }
-}
-
 @media (max-width: 600px) {
-  #content {
-    flex-direction: column-reverse;
-  }
-
-  #choices-container {
-    flex-direction: row;
-  }
-
   html {
     font-size: 10px;
   }
 }
 
 @media (max-width: 460px) {
-  #content {
-    flex-direction: column-reverse;
-  }
-
-  #choices-container {
-    flex-direction: row;
-  }
-
   html {
     font-size: 7px;
   }
 }
 
 @media (max-width: 320px) {
-  #content {
-    flex-direction: column-reverse;
-  }
-
-  #choices-container {
-    flex-direction: row;
-  }
-
   html {
     font-size: 5px;
   }
