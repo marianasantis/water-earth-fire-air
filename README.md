@@ -1,7 +1,7 @@
 # Water Earth Fire Air
 
 
-🔗 **Live preview:** [here](https://marianasantis.github.io/water-earth-fire-air/)
+## 🔗 **Live preview:** [here](https://marianasantis.github.io/water-earth-fire-air/)
 
 
 Water Earth Fire Air is a creative spin on the classic game of Rock Paper Scissors, inspired by the beloved universe of Avatar: The Last Airbender. This game draws from the rich lore of the Avatar Cycle, which dictates the order in which the Avatars are born into one of the Four Nations: Water, Earth, Fire, or Air. The cycle also represents the sequence in which each Avatar is destined to master the four elements.
